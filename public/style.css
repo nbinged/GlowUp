@@ -1,0 +1,177 @@
+h1 {
+    font-size: -webkit-xxx-large;
+}
+
+.navbar-nav.navbar-center.navbar-brand {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+    color: white;
+    font-family: Century-Gothic, Arial;
+    font-weight: bold;
+}
+
+.nav-link {
+    color: white;
+    font-family: Century-Gothic, Arial;
+    font-weight: bold;
+}
+
+.login-reg-background-image {
+    background-image: url('./logbg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: calc(100vh - 56px);
+    background-position: top;
+}
+
+.home-bg {
+    background-image: url('./home-bg.jpg');
+    background-size: cover;
+    height: calc(35vh);
+}
+
+.item-bg {
+    background-image: url('./item-bg.jpg');
+    background-size: cover;
+    height: calc(35vh);
+}
+
+.item-image{
+    max-width: 500px;
+    max-height: 500px;
+    margin: 20px;
+    padding-top:20px;
+}
+
+.welcome-text {
+    text-align: center;
+    justify-content: center;
+    padding: 15px;
+    margin: 10px;
+    font-family: 'Libre Caslon Text', serif;
+}
+
+.welcome-buttons {
+    background-color: white;
+    color: black;
+    height: calc(10vh);
+    text-align: center;
+    justify-content: center;
+    min-width: 100%;
+    display: inline-block;
+    font-family: Century-Gothic, Arial;
+}
+
+.clothes {
+    display: inline-block;
+    margin: 10px;
+    padding:10px;
+    background-color: #E47D31;
+    border-color: #E47D31;
+}
+
+.outfit {
+    display: inline-block;
+    margin: 10px;
+        padding:10px;
+    background-color: #9A4897;
+    border-color: #9A4897;
+}
+
+.empty-background {
+    background-color: #E1E1E3;
+    text-align: left;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.cloth-image-card {
+      max-width: 100%;
+      height: auto;
+}
+
+#sticky-footer {
+    flex-shrink: none;
+    background-color: #000000;
+    color: white;
+    font-style: bold;
+}
+
+.container text-center {
+    text-align: left;]
+}
+
+
+.card-img-top {
+    max-height: 434px;
+/*    max-width: 434px;*/
+    object-fit: contain;
+    padding-top: 15px;
+}
+
+.card-title {
+    color: black;
+    font-family: 'Libre Caslon Text', serif;
+    text-align: center;
+}
+
+.card-text {
+    color: black;
+    font-family: 'Libre Caslon Text', serif;
+    text-align: center;
+}
+
+.request-text {
+    text-align: left;
+    justify-content: center;
+    padding: 15px;
+    font-family: 'Libre Caslon Text', serif;
+}
+
+.col-sm-12 col-md-6 offset-md-4 {
+align-content: center;
+}
+
+.item-buttons {
+    display: inline-block;
+    margin: 10px;
+    padding:10px;
+    justify-content: left;
+    color: white;
+}
+
+.cardHolder {
+ display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+  margin-top: 3rem;
+}
+
+.add-bg {
+    background-image: url('./add-bg.jpg');
+    background-size: cover;
+    height: calc(35vh);
+}
+
+.column-center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+/*        text-align: center;*/
+
+}
+
+.list-group-item {
+    min-width: 550px;
+}
+
+.form-control {
+    min-width: 550px;
+}
