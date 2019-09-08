@@ -185,3 +185,12 @@ align-content: center;
 .form-control {
     min-width: 550px;
 }
+
+.nav-link-white {
+    display: block;
+    padding: .5rem 1rem;
+        color: white;
+    font-family: Century-Gothic, Arial;
+    font-weight: bold;
+    text-decoration: none;
+}

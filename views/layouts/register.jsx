@@ -2,10 +2,10 @@ var React = require('react');
 import { Container, Row, Col } from 'reactstrap';
 
   var styles1 = {
-        backgroundColor: '#E0A92D',
+        backgroundColor: '#FEC135',
         color: 'black',
-        lineHeight: '70px',
-        height: '70px'
+        lineHeight: '60px',
+        height: '60px'
   };
 
 class RegisterPage extends React.Component {

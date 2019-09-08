@@ -14,21 +14,18 @@ export default class login extends React.Component {
 <LoginPage>
 
         <Container fluid>
-        <Row>
 
+            <Row className="login-reg-background-image">
 
-        <Col xs="8" className="login-reg-background-image">
-        </Col>
+                <Col xs="6"></Col>
 
-        <Col xs="4" className="empty-background">
+                <Col xs="6" md={{ size: 4, offset: 0.5 }} className="empty-background">
 
-<div>
-        <h2>Welcome back to</h2>
-        <h1><strong>Locked In Closets</strong></h1>
+                        <h4>Welcome back to</h4>
+                        <h1 className="font-merienda"><strong>GlowUp</strong></h1>
 
-        <p>Please <font color="green"><strong>log in</strong></font> to access your digital clothing archive.</p>
+                        <p>Please <font color="green"><strong>log in</strong></font> so you can track and analyze your skin changes accurately over time.</p>
 
-        <br/>
         <br/>
 
     <Form method="POST" action={loginURL}>
@@ -54,7 +51,6 @@ export default class login extends React.Component {
             <Form action={registerURL}>
             <Button type={"submit"} size="lg">Register</Button>
             </Form>
-</div>
 
       </Col>
 

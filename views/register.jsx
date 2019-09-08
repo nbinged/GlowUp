@@ -16,15 +16,14 @@ export default class register extends React.Component {
         <Container fluid>
         <Row className="login-reg-background-image">
 
-
-        <Col xs="6" className="">
-        </Col>
+        <Col xs="6"></Col>
 
         <Col xs="6" md={{ size: 4, offset: 0.5 }} className="empty-background">
+
             <h4>Welcome to</h4>
             <h1 className="font-merienda"><strong>GlowUp</strong></h1>
 
-            <p> Please <font color="orange"><strong>make an account</strong></font> so you can track and analyze your skin changes accurately over time. </p>
+            <p> Please <font color="orange"><strong>make an account</strong></font> so you can track and analyze your skin changes accurately over time.</p>
 
             <br/>
 
