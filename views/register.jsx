@@ -21,7 +21,8 @@ export default class register extends React.Component {
         <Col xs="6" md={{ size: 4, offset: 0.5 }} className="empty-background">
 
             <h4>Welcome to</h4>
-            <h1 className="font-merienda"><strong>GlowUp</strong></h1>
+            <h1 className="font-merienda" style={{color : '#FEC135'}}><strong>GlowUp</strong></h1>
+            <br/>
 
             <p> Please <font color="orange"><strong>make an account</strong></font> so you can track and analyze your skin changes accurately over time.</p>
 

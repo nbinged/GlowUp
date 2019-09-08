@@ -6,43 +6,43 @@ class home extends React.Component {
   render() {
 
     let addItemURL = `/add`;
-    let addOutfitURL = `outift/add`;
+    // let addOutfitURL = `outift/add`;
     let editItemURL = `/edit`;
     let deleteItemURL = `/delete`;
     let itemUrl = `/item/`
-    let clothesListing;
+    // let clothesListing;
 
-    let clothes = this.props.allclothes;
+    // let clothes = this.props.allclothes;
     let username = this.props.cookieUser;
     // console.log(this.props)
     // let username = this.props[0].username;
 
 
 
-    if (clothes !== null ) {
-        clothesListing = clothes.map(oneItem =>
+//     if (clothes !== null ) {
+//         clothesListing = clothes.map(oneItem =>
 
-            (<Col>
+//             (<Col>
 
-<a href={'/item/'+oneItem.id}>
-    <div className="clothing-card">
-      <Card style={{ cursor: "pointer" }}>
-        <CardImg top width="100%" src={oneItem.image_file} alt="Card image cap"/>
+// <a href={'/item/'+oneItem.id}>
+//     <div className="clothing-card">
+//       <Card style={{ cursor: "pointer" }}>
+//         <CardImg top width="100%" src={oneItem.image_file} alt="Card image cap"/>
 
-        <CardBody>
-          <CardTitle><strong>{oneItem.item_brand}</strong></CardTitle>
-          <CardText>{oneItem.item_name}</CardText>
-        </CardBody>
+//         <CardBody>
+//           <CardTitle><strong>{oneItem.item_brand}</strong></CardTitle>
+//           <CardText>{oneItem.item_name}</CardText>
+//         </CardBody>
 
-      </Card>
-    </div>
-</a>
+//       </Card>
+//     </div>
+// </a>
 
-        </Col>));
+//         </Col>));
 
-    } else {
-        clothesListing = '';
-    }
+//     } else {
+//         clothesListing = '';
+//     }
 
     return (
 
@@ -65,7 +65,7 @@ class home extends React.Component {
         </Form>
 
         <Row className="cardHolder">
-                {clothesListing}
+
         </Row>
 
         <br/>

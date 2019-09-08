@@ -12,9 +12,7 @@ var storage = multer.diskStorage({
 
 var upload = multer({ storage: storage })
 
-
 module.exports = (app, allModels) => {
-
 
     /*
      *  =========================================
@@ -28,28 +26,28 @@ module.exports = (app, allModels) => {
      */
 
     // require the controller
-    const controllerCallbacks = require('./controllers/catalog')(allModels);
+    const usersControllerCallbacks = require('./controllers/users')(allModels);
+    const databaseControllerCallbacks = require('./controllers/database')(allModels);
 
-    app.get('/', controllerCallbacks.index);
-    app.get('/register', controllerCallbacks.showRegister);
-    app.post('/register', controllerCallbacks.register);
+    app.get('/', usersControllerCallbacks.index);
+    app.get('/register', usersControllerCallbacks.showRegister);
+    app.post('/register', usersControllerCallbacks.register);
 
-    app.get('/login', controllerCallbacks.showlogin);
-    app.post('/login', controllerCallbacks.login);
+    app.get('/login', usersControllerCallbacks.showlogin);
+    app.post('/login', usersControllerCallbacks.login);
+    app.get('/logout', usersControllerCallbacks.logout);
 
-    app.get('/home', controllerCallbacks.homepage);
+    app.get('/home', usersControllerCallbacks.homepage);
 
-    app.get('/add', controllerCallbacks.showAddItem);
-    app.post('/add', upload.single('image_file'),controllerCallbacks.addItem);
+    app.get('/add', databaseControllerCallbacks.showAddItem);
+    app.post('/add', upload.single('image_file'),databaseControllerCallbacks.addItem);
 
-    app.get('/logout', controllerCallbacks.logout);
+    app.get('/item/:id', databaseControllerCallbacks.getViewedItem);
 
-    app.get('/item/:id', controllerCallbacks.getViewedItem);
-
-    app.put('/item/:id/edit', controllerCallbacks.editItem);
-    app.get('/item/:id/edit', controllerCallbacks.getEditItem);
-    app.get('/item/:id/delete', controllerCallbacks.getDeleteItem);
-    app.delete('/item/:id/delete', controllerCallbacks.deleteItem);
+    app.put('/item/:id/edit', databaseControllerCallbacks.editItem);
+    app.get('/item/:id/edit', databaseControllerCallbacks.getEditItem);
+    app.get('/item/:id/delete', databaseControllerCallbacks.getDeleteItem);
+    app.delete('/item/:id/delete', databaseControllerCallbacks.deleteItem);
 };
 
 

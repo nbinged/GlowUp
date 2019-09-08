@@ -41,8 +41,8 @@ if( process.env.DATABASE_URL ){
       configs = {
         user: 'postgres',
         host: '127.0.0.1',
-        database: 'catalog',
         port: 5432,
+        database: 'glowedup',
         password:'passfoot'
       };
 }
@@ -65,8 +65,8 @@ pool.on('error', function (err) {
  * ===================================================
  */
 
-const allClothingModelsFunction = require('./models/clothing');
-const clothingModelsObject = allClothingModelsFunction( pool );
+const allDatabaseModelsFunction = require('./models/database');
+const databaseModelsObject = allDatabaseModelsFunction( pool );
 
 const allUsersModelsFunction = require('./models/users');
 const usersModelsObject = allUsersModelsFunction( pool );
@@ -98,5 +98,5 @@ module.exports = {
    * ADD APP MODELS HERE
    */
   users: usersModelsObject,
-  clothing: clothingModelsObject
+  database: databaseModelsObject
 };

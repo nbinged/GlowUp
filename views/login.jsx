@@ -22,9 +22,7 @@ export default class login extends React.Component {
                 <Col xs="6" md={{ size: 4, offset: 0.5 }} className="empty-background">
 
                         <h4>Welcome back to</h4>
-                        <h1 className="font-merienda"><strong>GlowUp</strong></h1>
-
-                        <p>Please <font color="green"><strong>log in</strong></font> so you can track and analyze your skin changes accurately over time.</p>
+                        <h1 className="font-merienda" style={{color : '#418D3A'}}><strong>GlowUp</strong></h1>
 
         <br/>
 
