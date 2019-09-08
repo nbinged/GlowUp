@@ -1,5 +1,6 @@
 body{
-    overflow-y:hidden
+    overflow-x:hidden;
+    overflow-y:hidden;
 }
 
 h1 {
@@ -8,7 +9,7 @@ h1 {
 
 .font-merienda {
     font-family: 'Merienda', cursive;
-    font-size:60px
+    font-size:60px;
 /*    margin:5px;*/
 }
 
@@ -21,6 +22,7 @@ h1 {
 }
 
 .nav-link {
+
     color: black;
     font-family: Century-Gothic, Arial;
     font-weight: bold;
@@ -43,12 +45,6 @@ h1 {
     height: calc(35vh);
 }
 
-.item-bg {
-    background-image: url('./item-bg.jpg');
-    background-size: cover;
-    height: calc(35vh);
-}
-
 .item-image{
     max-width: 500px;
     max-height: 500px;
@@ -57,45 +53,15 @@ h1 {
 }
 
 .welcome-text {
-    text-align: center;
+    text-align: left;
     justify-content: center;
-    padding: 15px;
-    margin: 10px;
+    padding-top: 50px;
     font-family: 'Libre Caslon Text', serif;
-}
-
-.welcome-buttons {
-    background-color: white;
-    color: black;
-    height: calc(10vh);
-    text-align: center;
-    justify-content: center;
-    min-width: 100%;
-    display: inline-block;
-    font-family: Century-Gothic, Arial;
-}
-
-.clothes {
-    display: inline-block;
-    margin: 10px;
-    padding:10px;
-    background-color: #E47D31;
-    border-color: #E47D31;
-}
-
-.outfit {
-    display: inline-block;
-    margin: 10px;
-        padding:10px;
-    background-color: #9A4897;
-    border-color: #9A4897;
 }
 
 .empty-background {
     text-align: left;
     padding: 30px;
-/*    display: flex;*/
-/*    justify-content: center;*/
     flex-direction: column;
     float-left: left;
     vertical-align: middle;
@@ -104,13 +70,6 @@ h1 {
 .cloth-image-card {
       max-width: 100%;
       height: auto;
-}
-
-#sticky-footer {
-    flex-shrink: none;
-    background-color: #000000;
-    color: white;
-    font-style: bold;
 }
 
 .container text-center {
@@ -163,18 +122,19 @@ align-content: center;
   margin-top: 3rem;
 }
 
-.add-bg {
-    background-image: url('./add-bg.jpg');
-    background-size: cover;
-    height: calc(35vh);
-}
-
 .column-center {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
 /*        text-align: center;*/
+}
+
+.column-background {
+  background-color: #B7E4EA;
+  min-height: 100%;
+  width: 100%;
+  height: 100vh;
 }
 
 .list-group-item {
@@ -188,8 +148,12 @@ align-content: center;
 .nav-link-white {
     display: block;
     padding: .5rem 1rem;
-        color: white;
+    color: white;
     font-family: Century-Gothic, Arial;
     font-weight: bold;
     text-decoration: none;
+}
+
+.small-circle {
+	max-width: 100px;
 }

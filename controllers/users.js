@@ -25,7 +25,7 @@ module.exports = (db) => {
         db.users.checkUserAccount(username,(error, callback) => {
             if (callback) {
                 response.redirect('/?err=register');
-                console.log("something went wrong in the users models callback")
+                console.log("something went wrong in the users models")
             }
             else {
                 db.users.registerUser(username, password,(error, callback) => {
@@ -34,7 +34,7 @@ module.exports = (db) => {
                         response.cookie('username', callback[0].username);
                         response.cookie('userID', callback[0].id)
                         response.redirect('/home');
-                        console.log("new account created succesfully")
+                        console.log("new account created successfully")
                     }
                     else {
                         response.redirect('/?err=register');
@@ -83,6 +83,7 @@ module.exports = (db) => {
         response.redirect('/login');
     };
 
+
     let homepageControllerCallback = (request, response) => {
         let cookieName = request.cookies.username;
         let storedCookie = request.cookies.logged_in;
@@ -90,30 +91,55 @@ module.exports = (db) => {
         if (storedCookie === undefined) {
             response.send('please log in!')
 
-        } else {
-            db.clothing.getAllClothes(cookieName, (error, callbackdata) => {
-                if (error) {
-                    console.log("error in getting file", error);
-
-                } else {
+        }  else {
 
                     let sessionCookieCheck = sha256(cookieName+'loggedin'+SALT)
 
                     if ( storedCookie === sessionCookieCheck ) {
                             let data = {
-                                allclothes : callbackdata,
+                                // allclothes : callbackdata,
                                 cookieUser : cookieName
-                            }
+                                }
+
                             response.render('home', data);
 
                     } else {
                         response.send('Username or password is wrong')
                     }
-                }
-
-            });
-        };
+            }
     };
+
+    // let homepageControllerCallback = (request, response) => {
+    //     let cookieName = request.cookies.username;
+    //     let storedCookie = request.cookies.logged_in;
+
+    //     if (storedCookie === undefined) {
+    //         response.send('please log in!')
+
+    //     } else {
+    //         db.clothing.getAllClothes(cookieName, (error, callbackdata) => {
+    //             if (error) {
+    //                 console.log("error in getting file", error);
+
+    //             } else {
+
+    //                 let sessionCookieCheck = sha256(cookieName+'loggedin'+SALT)
+
+    //                 if ( storedCookie === sessionCookieCheck ) {
+    //                         let data = {
+    //                             allclothes : callbackdata,
+    //                             cookieUser : cookieName
+    //                         }
+    //                         response.render('home', data);
+
+    //                 } else {
+    //                     response.send('Username or password is wrong')
+    //                 }
+    //             }
+
+    //         });
+    //     };
+    // };
 
     return {
 

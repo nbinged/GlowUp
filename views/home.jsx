@@ -1,78 +1,80 @@
 const React = require('react');
 var Default = require('./layouts/default');
+
 import { Container, Row, Col, Button, Form, FormGroup, Label, Input, FormText, Card, CardBody, CardTitle, CardText, CardImg} from 'reactstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+var moment = require('moment');
 
 class home extends React.Component {
   render() {
 
-    let addItemURL = `/add`;
-    // let addOutfitURL = `outift/add`;
-    let editItemURL = `/edit`;
-    let deleteItemURL = `/delete`;
-    let itemUrl = `/item/`
-    // let clothesListing;
+	// let addItemURL = `/add`;
 
-    // let clothes = this.props.allclothes;
-    let username = this.props.cookieUser;
-    // console.log(this.props)
-    // let username = this.props[0].username;
+	// let editItemURL = `/edit`;
+	// let deleteItemURL = `/delete`;
+	// let itemUrl = `/item/`
+
+	let username = this.props.cookieUser;
+
+	return (
+
+	<Default>
+		 	<Row className="row-wrapper">
+
+		 		<Col xs="3" className="column-background"></Col>
+
+		 		<Col className="column-middle">
+
+						<Col className="welcome-text">
+
+                                <h4><strong>Its {moment().format('MMMM Do YYYY, h:mm a')} today.</strong></h4>
+                                <h4><strong>Have you completed your routine yet?</strong></h4>
+						</Col>
+
+                        <br/>
+                        <hr/>
+                        <br/>
+
+                        <Col>
+                            <img src="circle-cropped.png" className="small-circle"/>
+                            <h3>AM Routine Complete/Not Complete</h3>
+                            <p>Add entry to your journal</p>
+                        </Col>
+
+                    <br/>
+
+                        <Col>
+                            <img src="moon.png" className="small-circle"/>
+                            <h3>PM Routine Complete/Not Complete</h3>
+                            <p>Add entry to your journal</p>
+                        </Col>
 
 
+                        <br/>
+                        <hr/>
+                        <br/>
 
-//     if (clothes !== null ) {
-//         clothesListing = clothes.map(oneItem =>
+                        <Row>
+                            <Col>
+                                <h1>Journal</h1>
+                            </Col>
 
-//             (<Col>
+                            <Col>
+                                <h1>Routines</h1>
+                            </Col>
 
-// <a href={'/item/'+oneItem.id}>
-//     <div className="clothing-card">
-//       <Card style={{ cursor: "pointer" }}>
-//         <CardImg top width="100%" src={oneItem.image_file} alt="Card image cap"/>
+                            <Col>
+                                <h1>Products</h1>
+                            </Col>
 
-//         <CardBody>
-//           <CardTitle><strong>{oneItem.item_brand}</strong></CardTitle>
-//           <CardText>{oneItem.item_name}</CardText>
-//         </CardBody>
+                        </Row>
+				</Col>
 
-//       </Card>
-//     </div>
-// </a>
+				<Col xs="3" className="column-background"></Col>
 
-//         </Col>));
-
-//     } else {
-//         clothesListing = '';
-//     }
-
-    return (
-
-    <Default>
-         <body>
-
-         <Row>
-            <Col className="home-bg">
-            </Col>
-         </Row>
-
-         <Row className="welcome-text">
-            <h2><strong>Welcome to your wardrobe, <font color="#11607E">{username}</font>.</strong></h2>
-        </Row>
-
-        <Form action="" className="welcome-buttons">
-
-                <Button className="clothes" formaction={addItemURL} type={"submit"} color="success" size="lg">Add new Clothes</Button>
-
-        </Form>
-
-        <Row className="cardHolder">
-
-        </Row>
-
-        <br/>
-
-        </body>
-
-    </Default>
+		</Row>
+	</Default>
 
   )};
 }
@@ -80,3 +82,10 @@ class home extends React.Component {
 module.exports = home;
 
 // <Button className="outfit" formaction={addOutfitURL} type={"submit"} color="success" size="lg">Create a new Outfit</Button>
+
+		// <Row className="cardHolder">
+		// </Row>
+
+                            //         <Col>
+                            //     <h1>Stats</h1>
+                            // </Col>

@@ -2,8 +2,10 @@ var React = require('react');
 import { Container, Row, Col } from 'reactstrap';
 
   var styles1 = {
-        backgroundColor: '#000000',
-        color: 'white'
+        backgroundColor: '#418D3A',
+        color: 'white',
+        lineHeight: '60px',
+        height: '60px'
   };
 
 class Default extends React.Component {
@@ -24,7 +26,7 @@ class Default extends React.Component {
             </head>
 
                         <nav className="navbar navbar-expand-lg" style={styles1}>
-                          <a className="navbar-nav navbar-center navbar-brand" a href="/home">GlowUp</a>
+                          <a className="navbar-nav navbar-center navbar-brand" a href="/home" style={{color :'white'}}>GlowUp</a>
 
                           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 
@@ -35,7 +37,19 @@ class Default extends React.Component {
                             <ul className="navbar-nav ml-auto">
 
                                 <li className="nav-item">
-                                    <a className="nav-link" href="/home">Wardrobe</a>
+                                    <a className="nav-link-white" href="/home">Journal</a>
+                                </li>
+
+                                <li className="nav-item">
+                                    <a className="nav-link-white" href="/home">Routines</a>
+                                </li>
+
+                                <li className="nav-item">
+                                    <a className="nav-link-white" href="/home">Products</a>
+                                </li>
+
+                                <li className="nav-item">
+                                    <a className="nav-link-white" href="/home">Stats</a>
                                 </li>
 
                                 <li className="nav-item">
