@@ -18,7 +18,7 @@ export default class login extends React.Component {
 
 
         <Col xs="8" className="login-reg-background-image">
-            </Col>
+        </Col>
 
         <Col xs="4" className="empty-background">
 

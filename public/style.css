@@ -1,18 +1,27 @@
+body{
+    overflow-y:hidden
+}
+
 h1 {
     font-size: -webkit-xxx-large;
+}
+
+.font-merienda {
+    font-family: 'Merienda', cursive;
+    font-size:60px
+/*    margin:5px;*/
 }
 
 .navbar-nav.navbar-center.navbar-brand {
     position: absolute;
     left: 50%;
     transform: translatex(-50%);
-    color: white;
-    font-family: Century-Gothic, Arial;
+    font-family: 'Merienda', cursive;
     font-weight: bold;
 }
 
 .nav-link {
-    color: white;
+    color: black;
     font-family: Century-Gothic, Arial;
     font-weight: bold;
 }
@@ -83,12 +92,13 @@ h1 {
 }
 
 .empty-background {
-    background-color: #E1E1E3;
     text-align: left;
     padding: 30px;
-    display: flex;
-    justify-content: center;
+/*    display: flex;*/
+/*    justify-content: center;*/
     flex-direction: column;
+    float-left: left;
+    vertical-align: middle;
 }
 
 .cloth-image-card {

@@ -14,20 +14,18 @@ export default class register extends React.Component {
 <RegisterPage>
 
         <Container fluid>
-        <Row>
+        <Row className="login-reg-background-image">
 
 
-        <Col xs="8" className="login-reg-background-image">
-            </Col>
+        <Col xs="6" className="">
+        </Col>
 
-        <Col xs="4" className="empty-background">
+        <Col xs="6" md={{ size: 4, offset: 0.5 }} className="empty-background">
+            <h4>Welcome to</h4>
+            <h1 className="font-merienda"><strong>GlowUp</strong></h1>
 
-            <h2>Welcome to</h2>
-            <h1><strong>Locked In Closets</strong></h1>
+            <p> Please <font color="orange"><strong>make an account</strong></font> so you can track and analyze your skin changes accurately over time. </p>
 
-            <p>Please <font color="orange"><strong>make an account</strong></font> to create your own digital clothing archive</p>
-
-            <br/>
             <br/>
 
     <Form method="POST" action={registerURL}>
@@ -54,7 +52,8 @@ export default class register extends React.Component {
             <Button type={"submit"} size="lg" >Login</Button>
             </Form>
 
-      </Col>
+
+    </Col>
 
     </Row>
 

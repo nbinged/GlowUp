@@ -2,8 +2,10 @@ var React = require('react');
 import { Container, Row, Col } from 'reactstrap';
 
   var styles1 = {
-        backgroundColor: '#000000',
-        color: 'white'
+        backgroundColor: '#E0A92D',
+        color: 'black',
+        lineHeight: '70px',
+        height: '70px'
   };
 
 class RegisterPage extends React.Component {
@@ -18,11 +20,12 @@ class RegisterPage extends React.Component {
                 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
                       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
                       crossOrigin="anonymous"/>
+                <link href="https://fonts.googleapis.com/css?family=Merienda&display=swap" rel="stylesheet"/>
                 <link rel="stylesheet" type="text/css" href="/style.css"/>
             </head>
 
                         <nav className="navbar navbar-expand-lg" style={styles1}>
-                          <a className="navbar-nav navbar-center navbar-brand">Locked In Closets</a>
+                          <a className="navbar-nav navbar-center navbar-brand">GlowUp</a>
 
                           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 

@@ -1,57 +1,74 @@
-var React = require('react');
-import { Container, Row, Col } from 'reactstrap';
+const React = require('react');
+var LoginPage = require('./layouts/login');
+import { Container, Row, Col, Button, Form, FormGroup, Label, Input, FormText} from 'reactstrap';
 
-  var styles1 = {
-        backgroundColor: '#000000',
-        color: 'white'
-  };
+export default class login extends React.Component {
+  render() {
 
-class LoginPage extends React.Component {
-    render() {
-        return (
-            <html>
+    let loginURL = `/login`;
+    let registerURL = `/register`;
 
-            <head>
-                <title>Login</title>
 
-                <link rel="icon" href="/favicon.png" type="image/png" sizes="16x16"/>
-                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-                      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-                      crossOrigin="anonymous"/>
-                <link rel="stylesheet" type="text/css" href="/style.css"/>
-            </head>
+    return (
+        <head>
+            <link href="https://fonts.googleapis.com/css?family=Merienda&display=swap" rel="stylesheet"/>
+        </head>
 
-                        <nav className="navbar navbar-expand-lg" style={styles1}>
-                          <a className="navbar-nav navbar-center navbar-brand">Locked In Closets</a>
+<LoginPage>
 
-                          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <Container fluid>
+        <Row>
 
-                            <span className="navbar-toggler-icon"></span>
-                          </button>
 
-                          <div className="collapse navbar-collapse" id="navbarNav">
-                            <ul className="navbar-nav ml-auto">
+        <Col xs="8" className="login-reg-background-image">
+            </Col>
 
-                                <li className="nav-item">
-                                    <a className="nav-link" href="/register">Register</a>
-                                </li>
+        <Col xs="4" className="empty-background">
 
-                                <li className="nav-item">
-                                    <a className="nav-link" href="/login">Login</a>
-                                </li>
+<div>
+        <h2>Welcome back to</h2>
+        <h1><strong>Locked In Closets</strong></h1>
 
-                            </ul>
-                          </div>
+        <p>Please <font color="green"><strong>log in</strong></font> to access your digital clothing archive.</p>
 
-                        </nav>
+        <br/>
+        <br/>
 
-                    {this.props.children}
+    <Form method="POST" action={loginURL}>
 
-                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossOrigin="anonymous"></script>
+        <FormGroup>
+          <Label for="Username"><strong>Username:</strong></Label>
+          <Input type="text" name="username" required/>
+        </FormGroup>
 
-            </html>
-        );
-    }
+        <FormGroup>
+          <Label for="Password"><strong>Password:</strong></Label>
+          <Input type="password" name="password" required/>
+        </FormGroup>
+
+        <Button type={"submit"} color="success" size="lg" block><strong>Log In</strong></Button>
+      </Form>
+
+            <br/>
+            <br/>
+
+        <h6>Dont have an account? Create one instead!</h6>
+
+            <Form action={registerURL}>
+            <Button type={"submit"} size="lg">Register</Button>
+            </Form>
+</div>
+
+      </Col>
+
+    </Row>
+
+    </Container>
+
+</LoginPage>
+
+    );
+  }
 }
 
-module.exports = LoginPage;
+module.exports = login;
