@@ -7,9 +7,6 @@ import { Container, Row, Col, Button, Form, FormGroup, Label, Input, FormText, C
 class addJournals extends React.Component {
   render() {
 
-    let props = this.props;
-    console.log(props);
-
     return (
 
     <Default>
@@ -29,7 +26,7 @@ class addJournals extends React.Component {
 
                         </div>
 
-                            <Form enctype="form-data" action="alljournals/add" method="POST">
+                            <Form action="/addjournals" method="POST">
 
                                     <input type="hidden" name="user_id" value={this.props.userID}/>
                                     <input type="hidden" name="username" value={this.props.username}/>
@@ -45,19 +42,19 @@ class addJournals extends React.Component {
                                         <div class="skin_rating_scale">
                                             <Row>
                                                 <Label class="radioimage skin-rating-1" for="skin-rating-1"></Label>
-                                                <Input id="skin-rating-1" type="radio" name="skin-rating" value="1" required/><br/>
+                                                <Input id="skin-rating-1" type="radio" name="skin_rating" value="1" required/><br/>
 
                                                 <Label class="radioimage skin-rating-2" for="skin-rating-2"></Label>
-                                                <Input id="skin-rating-2" type="radio" name="skin-rating" value="2" required/><br/>
+                                                <Input id="skin-rating-2" type="radio" name="skin_rating" value="2" required/><br/>
 
                                                 <Label class="radioimage skin-rating-3" for="skin-rating-3"></Label>
-                                                <Input id="skin-rating-3" type="radio" name="skin-rating" value="3" required/><br/>
+                                                <Input id="skin-rating-3" type="radio" name="skin_rating" value="3" required/><br/>
 
                                                 <Label class="radioimage skin-rating-4" for="skin-rating-4"></Label>
-                                                <Input id="skin-rating-4" type="radio" name="skin-rating" value="4" required/><br/>
+                                                <Input id="skin-rating-4" type="radio" name="skin_rating" value="4" required/><br/>
 
                                                 <Label class="radioimage skin-rating-5" for="skin-rating-5"></Label>
-                                                <Input id="skin-rating-5" type="radio" name="skin-rating" value="5" required/><br/>
+                                                <Input id="skin-rating-5" type="radio" name="skin_rating" value="5" required/><br/>
                                             </Row>
                                         </div>
                                 </FormGroup>

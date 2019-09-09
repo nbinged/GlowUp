@@ -21,6 +21,8 @@ module.exports = (db) => {
      */
 
     let viewAddJournalsControllerCallback = (request, response) => {
+        let cookies = request.cookies;
+
         let cookieName = request.cookies.username;
         let storedCookie = request.cookies.logged_in;
 
@@ -30,7 +32,8 @@ module.exports = (db) => {
             } else {
                     let sessionCookieCheck = sha256(cookieName+'loggedin'+SALT)
                     if ( storedCookie === sessionCookieCheck ) {
-                         response.render('./journals/addJournals');
+
+                         response.render('./journals/addJournals', cookies);
                     }
 
                         else {
@@ -39,17 +42,20 @@ module.exports = (db) => {
                 }
     };
 
+
     let addJournalsControllerCallback = (request, response) => {
 
-                let cookierequest = request.cookies;
+                // let cookierequest = request.cookies;
+                console.log('controllersssssssssssssssssssssssssssssssssss bodiessssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss')
+                console.log(request.body)
 
-                    db.journals.addSingleJournal(request.body,result.url,cookierequest,(error, callback) => {
+                    db.journals.addSingleJournals(request.body,(error, callback) => {
 
                         let data = {
                                 journals : callback
                                     }
 
-                                response.redirect('home');
+                            response.redirect('home');
         });
     };
 
@@ -61,8 +67,14 @@ module.exports = (db) => {
 
     return {
 
-           viewAddJournals : viewAddJournalsControllerCallback,
+           viewAddJournals: viewAddJournalsControllerCallback,
            addSingleJournals : addJournalsControllerCallback
+
+//         getEditJournals: editViewedJournalsControllerCallback,
+//         editJournals: editJournalsControllerCallback,
+
+//         getDeleteJournals: deleteViewedJournalsControllerCallback,
+//         deleteJournals: deleteJournalsControllerCallback
 
     };
 
