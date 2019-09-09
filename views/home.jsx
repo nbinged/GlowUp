@@ -28,7 +28,7 @@ class home extends React.Component {
 
 						<Col className="welcome-text">
 
-                                <h4><strong>Its {moment().format('MMMM Do YYYY, h:mm a')} today.</strong></h4>
+                                <h2><strong>Its {moment().format('MMMM Do YYYY, h:mm a')} today.</strong></h2>
                                 <h4><strong>Have you completed your routine yet?</strong></h4>
 						</Col>
 
@@ -57,15 +57,24 @@ class home extends React.Component {
 
                         <Row>
                             <Col>
-                                <a href="/journal"><h1>Journal</h1></a>
+                                <a href="/journal"><img border="1" alt="Journals" src="book-open-solid.png" width="100" height="100"/></a>
+                                <h2>Journals</h2>
                             </Col>
 
                             <Col>
-                                <a href="/routines"><h1>Routines</h1></a>
+
+                                <a href="/routines"><img border="1" alt="Routines" src="user-clock-solid.png" width="100" height="100"/></a>
+                                <h2>Routines</h2>
                             </Col>
 
                             <Col>
-                                <a href="/products"><h1>Products</h1></a>
+                                <a href="/products"><img border="1" alt="Routines" src="tint-solid.png" width="100" height="100"/></a>
+                                <h2>Products</h2>
+                            </Col>
+
+                            <Col>
+                                <a href="/statistics"><img border="1" alt="Routines" src="chart-bar-solid.png" width="100" height="100"/></a>
+                                <h2>statistics</h2>
                             </Col>
 
                         </Row>
