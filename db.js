@@ -65,8 +65,8 @@ pool.on('error', function (err) {
  * ===================================================
  */
 
-const allDatabaseModelsFunction = require('./models/database');
-const databaseModelsObject = allDatabaseModelsFunction( pool );
+const allJournalsModelsFunction = require('./models/journals');
+const journalsModelsObject = allJournalsModelsFunction( pool );
 
 const allUsersModelsFunction = require('./models/users');
 const usersModelsObject = allUsersModelsFunction( pool );
@@ -98,5 +98,5 @@ module.exports = {
    * ADD APP MODELS HERE
    */
   users: usersModelsObject,
-  database: databaseModelsObject
+  journals: journalsModelsObject
 };

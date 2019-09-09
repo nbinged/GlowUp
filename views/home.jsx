@@ -57,15 +57,15 @@ class home extends React.Component {
 
                         <Row>
                             <Col>
-                                <h1>Journal</h1>
+                                <a href="/journal"><h1>Journal</h1></a>
                             </Col>
 
                             <Col>
-                                <h1>Routines</h1>
+                                <a href="/routines"><h1>Routines</h1></a>
                             </Col>
 
                             <Col>
-                                <h1>Products</h1>
+                                <a href="/products"><h1>Products</h1></a>
                             </Col>
 
                         </Row>

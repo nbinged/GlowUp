@@ -27,7 +27,6 @@ module.exports = (app, allModels) => {
 
     // require the controller
     const usersControllerCallbacks = require('./controllers/users')(allModels);
-    const databaseControllerCallbacks = require('./controllers/database')(allModels);
 
     app.get('/', usersControllerCallbacks.index);
     app.get('/register', usersControllerCallbacks.showRegister);
@@ -39,16 +38,21 @@ module.exports = (app, allModels) => {
 
     app.get('/home', usersControllerCallbacks.homepage);
 
-    app.get('/add', databaseControllerCallbacks.showAddItem);
-    app.post('/add', upload.single('image_file'),databaseControllerCallbacks.addItem);
+    //Journals Routes
+    const journalsControllerCallbacks = require('./controllers/journals')(allModels);
 
-    app.get('/item/:id', databaseControllerCallbacks.getViewedItem);
+    app.get('/addjournals', journalsControllerCallbacks.showAddJournals);
+    // app.post('/addjournals', upload.single('image_file'),journalsControllerCallbacks.addItem);
 
-    app.put('/item/:id/edit', databaseControllerCallbacks.editItem);
-    app.get('/item/:id/edit', databaseControllerCallbacks.getEditItem);
-    app.get('/item/:id/delete', databaseControllerCallbacks.getDeleteItem);
-    app.delete('/item/:id/delete', databaseControllerCallbacks.deleteItem);
+    //Not working yet.
+    // app.get('/journals/:id', journalsControllerCallbacks.getViewedItem);
+
+    // app.put('/journals/:id/edit', journalsControllerCallbacks.editItem);
+    // app.get('/journals/:id/edit', journalsControllerCallbacks.getEditItem);
+    // app.get('/journals/:id/delete', journalsControllerCallbacks.getDeleteItem);
+    // app.delete('/journals/:id/delete', journalsControllerCallbacks.deleteItem);
 };
+
 
 
 
