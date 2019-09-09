@@ -1,16 +1,16 @@
-var multer = require('multer');
-var uploadPath = 'public/uploads/';
+// var multer = require('multer');
+// var uploadPath = 'public/uploads/';
 
-var storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, uploadPath )
-  },
-  filename: function (req, file, cb) {
-    cb(null, file.fieldname + '-' + Date.now() + file.originalname)
-  }
-})
+// var storage = multer.diskStorage({
+//   destination: function (req, file, cb) {
+//     cb(null, uploadPath )
+//   },
+//   filename: function (req, file, cb) {
+//     cb(null, file.fieldname + '-' + Date.now() + file.originalname)
+//   }
+// })
 
-var upload = multer({ storage: storage })
+// var upload = multer({ storage: storage })
 
 module.exports = (app, allModels) => {
 
@@ -41,7 +41,12 @@ module.exports = (app, allModels) => {
     //Journals Routes
     const journalsControllerCallbacks = require('./controllers/journals')(allModels);
 
-    app.get('/addjournals', journalsControllerCallbacks.showAddJournals);
+    app.get('/addjournals', journalsControllerCallbacks.viewAddJournals);
+    app.post('/addjournals', journalsControllerCallbacks.addSingleJournals);
+
+};
+
+
     // app.post('/addjournals', upload.single('image_file'),journalsControllerCallbacks.addItem);
 
     //Not working yet.
@@ -51,8 +56,6 @@ module.exports = (app, allModels) => {
     // app.get('/journals/:id/edit', journalsControllerCallbacks.getEditItem);
     // app.get('/journals/:id/delete', journalsControllerCallbacks.getDeleteItem);
     // app.delete('/journals/:id/delete', journalsControllerCallbacks.deleteItem);
-};
-
 
 
 

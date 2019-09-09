@@ -26,11 +26,6 @@ class Default extends React.Component {
                 <link href="https://fonts.googleapis.com/css?family=Merienda&display=swap" rel="stylesheet"/>
                 <link rel="stylesheet" type="text/css" href="/style.css"/>
 
-                  <script type="text/javascript" src="/bower_components/jquery/jquery.min.js"></script>
-                  <script type="text/javascript" src="/bower_components/moment/min/moment.min.js"></script>
-                  <script type="text/javascript" src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-                  <script type="text/javascript" src="/bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
-
             </head>
 
 
