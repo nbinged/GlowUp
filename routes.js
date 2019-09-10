@@ -26,6 +26,10 @@ module.exports = (app, allModels) => {
      */
 
     // require the controller
+
+    ////////////////
+    //Users Routes//
+    ////////////////
     const usersControllerCallbacks = require('./controllers/users')(allModels);
 
     app.get('/', usersControllerCallbacks.index);
@@ -38,24 +42,30 @@ module.exports = (app, allModels) => {
 
     app.get('/home', usersControllerCallbacks.homepage);
 
-    //Journals Routes
+    ///////////////////
+    //Journals Routes//
+    ///////////////////
     const journalsControllerCallbacks = require('./controllers/journals')(allModels);
 
     app.get('/addjournals', journalsControllerCallbacks.viewAddJournals);
     app.post('/addjournals', journalsControllerCallbacks.addSingleJournals);
 
-};
-
-
-    // app.post('/addjournals', upload.single('image_file'),journalsControllerCallbacks.addItem);
-
-    //Not working yet.
+    //Not completed yet.
+    // app.post('/addjournals', upload.single('image_file'),journalsControllerCallbacks.addItem);s
     // app.get('/journals/:id', journalsControllerCallbacks.getViewedItem);
-
-    // app.put('/journals/:id/edit', journalsControllerCallbacks.editItem);
     // app.get('/journals/:id/edit', journalsControllerCallbacks.getEditItem);
+    // app.put('/journals/:id/edit', journalsControllerCallbacks.editItem);
     // app.get('/journals/:id/delete', journalsControllerCallbacks.getDeleteItem);
     // app.delete('/journals/:id/delete', journalsControllerCallbacks.deleteItem);
+
+    /////////////////////
+    //Statistics Routes//
+    /////////////////////
+    const statisticsControllerCallBacks = require('./controllers/statistics')(allModels);
+
+    app.get('/statistics', statisticsControllerCallBacks.viewStatistics);
+};
+
 
 
 

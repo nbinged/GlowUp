@@ -2,7 +2,6 @@ const React = require('react');
 var Default = require('./layouts/default');
 
 import { Container, Row, Col, Button, Form, FormGroup, Label, Input, FormText, Card, CardBody, CardTitle, CardText, CardImg} from 'reactstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 var moment = require('moment');
 
@@ -20,6 +19,7 @@ class home extends React.Component {
 	return (
 
 	<Default>
+        <body>
 		 	<Row className="row-wrapper">
 
 		 		<Col xs="3" className="column-background"></Col>
@@ -28,7 +28,7 @@ class home extends React.Component {
 
 						<Col className="welcome-text">
 
-                                <h2><strong>Its {moment().format('MMMM Do YYYY, h:mm a')} today.</strong></h2>
+                                <h2><strong>Its {moment().format('Do MMMM YYYY, h:mm a')} today.</strong></h2>
                                 <h4><strong>Have you completed your routine yet?</strong></h4>
 						</Col>
 
@@ -36,18 +36,23 @@ class home extends React.Component {
                         <hr/>
                         <br/>
 
-                        <Col>
-                            <img src="circle-cropped.png" className="small-circle"/>
-                            <h3>AM Routine Complete/Not Complete</h3>
-                            <p>Add entry to your journal</p>
+                        <Col className="routine-completion">
+
+                            <div><img src="circle-cropped.png" className="small-circle"/></div>
+                            <div><h4>AM Routine</h4><h4><span className="green">-Routine Completed-</span></h4></div>
+                            <div><Button color="warning"><strong>ADD JOURNAL ENTRY</strong></Button></div>
+
                         </Col>
 
                     <br/>
+                    <br/>
 
-                        <Col>
-                            <img src="moon.png" className="small-circle"/>
-                            <h3>PM Routine Complete/Not Complete</h3>
-                            <p>Add entry to your journal</p>
+                        <Col className="routine-completion">
+
+                            <div><img src="moon.png" className="small-circle"/></div>
+                            <div><h4>PM Routine</h4><h4><span className="red">-Routine Incomplete-</span></h4></div>
+                            <div><Button color="warning"><strong>ADD JOURNAL ENTRY</strong></Button></div>
+
                         </Col>
 
 
@@ -83,6 +88,7 @@ class home extends React.Component {
 				<Col xs="3" className="column-background"></Col>
 
 		</Row>
+        </body>
 	</Default>
 
   )};
@@ -98,3 +104,8 @@ module.exports = home;
                             //         <Col>
                             //     <h1>Stats</h1>
                             // </Col>
+
+
+                            // SELECT * FROM journals WHERE user_id = $1
+
+                            // let arr = queryResult.rows.map(x=>x.skin_rating)

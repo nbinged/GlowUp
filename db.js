@@ -71,6 +71,9 @@ const journalsModelsObject = allJournalsModelsFunction( pool );
 const allUsersModelsFunction = require('./models/users');
 const usersModelsObject = allUsersModelsFunction( pool );
 
+const allStatisticsModelsFunction = require('./models/statistics')
+const statisticsModelsObject = allStatisticsModelsFunction( pool );
+
 
 /*
  * ===================================================
@@ -98,5 +101,6 @@ module.exports = {
    * ADD APP MODELS HERE
    */
   users: usersModelsObject,
-  journals: journalsModelsObject
+  journals: journalsModelsObject,
+  statistics: statisticsModelsObject
 };

@@ -46,7 +46,6 @@ module.exports = (db) => {
     let addJournalsControllerCallback = (request, response) => {
 
                 // let cookierequest = request.cookies;
-                console.log('controllersssssssssssssssssssssssssssssssssss bodiessssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss')
                 console.log(request.body)
 
                     db.journals.addSingleJournals(request.body,(error, callback) => {

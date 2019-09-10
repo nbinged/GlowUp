@@ -14,9 +14,6 @@ module.exports = (dbPoolInstance) => {
         let query = 'INSERT INTO journals (user_id, username, journal_date, skin_rating, journal_notes, image_file) VALUES ($1,$2,$3,$4,$5,$6) RETURNING *';
         let values = [form.user_id, form.username, form.journal_date, form.skin_rating, form.journal_notes, form.image_file];
 
-        console.log("valuessssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss")
-        console.log(values)
-
         dbPoolInstance.query(query, values, (error, queryResult) => {
             if (error) {
 

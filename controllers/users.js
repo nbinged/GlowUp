@@ -97,7 +97,6 @@ module.exports = (db) => {
 
                     if ( storedCookie === sessionCookieCheck ) {
                             let data = {
-                                // allclothes : callbackdata,
                                 cookieUser : cookieName
                                 }
 

@@ -157,6 +157,26 @@ align-content: center;
 	max-width: 100px;
 }
 
+.routine-completion {
+    display: flex;
+    justify-content: space-around;
+
+  align-self: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .skin_rating_scale input{
     margin:0;padding:0;
     -webkit-appearance:none;
