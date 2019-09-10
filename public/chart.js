@@ -1,5 +1,7 @@
-window.onload = function() {
 
+
+window.onload = function() {
+console.log("chartjs")
         var ctx = document.getElementById('myChart');
         var myChart = new Chart(ctx, {
             type: 'bar',

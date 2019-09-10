@@ -28,6 +28,9 @@ class Default extends React.Component {
 
                 <link rel="stylesheet" type="text/css" href="/style.css"/>
 
+                   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script>
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
+
             </head>
 
 

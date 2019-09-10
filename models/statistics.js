@@ -11,15 +11,16 @@ module.exports = (dbPoolInstance) => {
 
         dbPoolInstance.query(query, values, (error, queryResult) => {
 
-            console.log("test")
-
             if (error) {
                 callback(error, null);
+                console.log("model errorssssssssssssssssssssssssssssssssss")
             } else {
                 if (queryResult.rows.length > 0) {
                     callback(null, queryResult.rows);
+                    console.log("database accessedddddddddddddddddddddddddddddddd")
                 } else {
                     callback(null, null);
+                    console.log("model errorssssssssssssssssssssssssssssssssss")
                 }
             }
         });

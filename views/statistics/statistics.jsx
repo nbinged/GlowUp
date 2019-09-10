@@ -1,16 +1,17 @@
 const React = require('react');
 var Default = require('../layouts/default');
-import { Container, Row, Col, Button, Form, FormGroup, Label, Input, FormText} from 'reactstrap';
 var Chart = require('chart.js');
+import { Container, Row, Col, Button, Form, FormGroup, Label, Input, FormText} from 'reactstrap';
+
 
 class statistics extends React.Component {
   render() {
 
-    // let data = {
-    //     // test: this.props.result,
-    //     // cat: this.props.category_expenses
-    // };
-    // let jData = JSON.stringify(data);
+    let data = {
+        test: this.props.result,
+        cat: this.props.category_expenses
+    };
+    let jData = JSON.stringify(data);
 
     // let addItemURL = `/add`;
 
@@ -61,10 +62,7 @@ class statistics extends React.Component {
             </Row>
         </body>
 
-    <script dangerouslySetInnerHTML={ {__html:
-                    `var expenses = ${jData};`
-                  }}/>
-    <script src="/chart.js"></script>
+                <script src="/chart.js"></script>
 
     </Default>
 
@@ -73,7 +71,5 @@ class statistics extends React.Component {
 
 module.exports = statistics;
 
-    // <script dangerouslySetInnerHTML={
 
-    //     {__html:`var expenses = ${jData};`}}/>
 

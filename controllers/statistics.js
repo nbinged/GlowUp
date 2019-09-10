@@ -16,6 +16,9 @@ module.exports = (db) => {
         // let cookies = request.cookies;
 
         let cookieName = request.cookies.username;
+        let cookieID = request.cookies.userID;
+        // console.log(request.cookies.userID)
+
         let storedCookie = request.cookies.logged_in;
         let sessionCookieCheck = sha256(cookieName+'loggedin'+SALT)
 
@@ -24,7 +27,7 @@ module.exports = (db) => {
 
                 } else {
 
-                    db.statistics.queryStatistics(cookieName, (error, callback) => {
+                    db.statistics.queryStatistics(cookieID, (error, callback) => {
 
                         if (error) {
                                 console.log("error in getting file", error);
@@ -34,9 +37,10 @@ module.exports = (db) => {
                             if ( storedCookie === sessionCookieCheck ) {
 
                                 let data = {
-                                    journaldata : callbackdata,
-                                    cookieUser : cookieName
+                                    journaldata : callback,
+                                    cookieUser : cookieID
                             }
+
                             response.render('./statistics/statistics',data)
 
                         } else {
