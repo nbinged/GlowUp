@@ -1,4 +1,4 @@
-# GA SEI Project 4- GlowUop
+# GA SEI Project 4- GlowUp
 
 Title:
 
