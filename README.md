@@ -18,4 +18,3 @@ Future features:
 - - - - - 
 
 Wireframe:
-https://imgur.com/a/KZuUchr
