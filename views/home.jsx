@@ -20,6 +20,8 @@ class home extends React.Component {
 
 	<Default>
         <body>
+        <br/>
+        <br/>
 		 	<Row className="row-wrapper">
 
 		 		<Col xs="3" className="column-background"></Col>
@@ -36,50 +38,40 @@ class home extends React.Component {
                         <hr/>
                         <br/>
 
-                        <Col className="routine-completion">
+                    <Row className="text-align-center">
 
-                            <div><img src="circle-cropped.png" className="small-circle"/></div>
-                            <div><h4>AM Routine</h4><h4><span className="green">-Routine Completed-</span></h4></div>
+                        <div className="div-align-center">
+                            <img src="circle-cropped.png" className="small-circle"/>
+                            <h4>AM ROUTINES</h4>
                             <div><a href="/addjournals"><Button color="warning"><strong>ADD JOURNAL ENTRY</strong></Button></a></div>
+                        </div>
 
-                        </Col>
-
-                    <br/>
-                    <br/>
-
-                        <Col className="routine-completion">
-
-                            <div><img src="moon.png" className="small-circle"/></div>
-                            <div><h4>PM Routine</h4><h4><span className="red">-Routine Incomplete-</span></h4></div>
+                        <div className="div-align-center">
+                            <img src="moon.png" className="small-circle"/>
+                            <h4>PM ROUTINES</h4>
                             <div><a href="/addjournals"><Button color="warning"><strong>ADD JOURNAL ENTRY</strong></Button></a></div>
+                        </div>
 
-                        </Col>
-
+                    </Row>
 
                         <br/>
                         <hr/>
                         <br/>
 
                         <Row>
-                            <Col>
-                                <a href="/alljournals"><img border="1" alt="Journals" src="book-open-solid.png" width="100" height="100"/></a>
-                                <h2>Journals</h2>
-                            </Col>
+                            <Col className="text-align-center">
 
-                            <Col>
 
-                                <a href="/routines"><img border="1" alt="Routines" src="user-clock-solid.png" width="100" height="100"/></a>
-                                <h2>Routines</h2>
-                            </Col>
+                                <div>
+                                    <a href="/alljournals"><img border="1" alt="Journals" src="book-open-solid.png" width="100" height="100"/></a>
+                                    <h2>Journals</h2>
+                                </div>
 
-                            <Col>
-                                <a href="/products"><img border="1" alt="Routines" src="tint-solid.png" width="100" height="100"/></a>
-                                <h2>Products</h2>
-                            </Col>
 
-                            <Col>
-                                <a href="/statistics"><img border="1" alt="Routines" src="chart-bar-solid.png" width="100" height="100"/></a>
-                                <h2>statistics</h2>
+                                <div>
+                                    <a href="/statistics"><img border="1" alt="Routines" src="chart-bar-solid.png" width="100" height="100"/></a>
+                                    <h2>statistics</h2>
+                                </div>
                             </Col>
 
                         </Row>

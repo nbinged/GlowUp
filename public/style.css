@@ -159,9 +159,9 @@ align-content: center;
 
 .routine-completion {
     display: flex;
-    justify-content: space-around;
-
-  align-self: center;
+    justify-content: center;
+    vertical-align: baseline;
+    text-align: center;
 }
 
 .canvas-containter {
@@ -170,10 +170,17 @@ align-content: center;
     margin: 40px;
 }
 
+.text-align-center {
+    display: flex;
+    justify-content: space-evenly;
+    vertical-align: baseline;
+
+}
 
 
-
-
+.div-align-center {
+    text-align: center;
+}
 
 
 

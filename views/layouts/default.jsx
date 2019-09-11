@@ -50,14 +50,6 @@ class Default extends React.Component {
                                 </li>
 
                                 <li className="nav-item">
-                                    <a className="nav-link-white" href="/home">Routines</a>
-                                </li>
-
-                                <li className="nav-item">
-                                    <a className="nav-link-white" href="/home">Products</a>
-                                </li>
-
-                                <li className="nav-item">
                                     <a className="nav-link-white" href="/home">Stats</a>
                                 </li>
 
@@ -80,16 +72,10 @@ class Default extends React.Component {
 
 module.exports = Default;
 
-// <footer id="sticky-footer" class="py-3">
-//     <div class="container text-center">
-//     <small>&copy; Locked In Closets</small></div>
-// </footer>
-
-
                                 // <li className="nav-item">
-                                //     <a className="nav-link" href="/outfits">Outfits</a>
+                                //     <a className="nav-link-white" href="/home">Routines</a>
                                 // </li>
 
                                 // <li className="nav-item">
-                                //     <a className="nav-link" href="/lookbook">Lookbook</a>
+                                //     <a className="nav-link-white" href="/home">Products</a>
                                 // </li>
