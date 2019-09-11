@@ -4,16 +4,25 @@ CREATE TABLE IF NOT EXISTS users (
     password TEXT
 );
 
-CREATE TABLE IF NOT EXISTS clothing (
+CREATE TABLE IF NOT EXISTS journals (
     id SERIAL PRIMARY KEY,
     user_id INTEGER,
     username TEXT,
-    item_name TEXT,
-    item_brand TEXT,
-    item_size TEXT,
-    item_color TEXT,
-    item_catergories TEXT,
+    journal_date DATE,
+    skin_rating INTEGER,
+    journal_notes TEXT,
     image_file TEXT,
+    create_at TIMESTAMP DEFAULT now()
+);
+
+CREATE TABLE IF NOT EXISTS routines (
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER,
+    cleanser TEXT,
+    toner TEXT,
+    moisturizer TEXT,
+    treatment TEXT,
+    sunblock TEXT,
     create_at TIMESTAMP DEFAULT now()
 );
 

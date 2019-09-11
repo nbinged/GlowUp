@@ -164,7 +164,11 @@ align-content: center;
   align-self: center;
 }
 
-
+.canvas-containter {
+    height: 600px;
+    width: 600px;
+    margin: 40px;
+}
 
 
 

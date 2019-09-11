@@ -40,7 +40,7 @@ class home extends React.Component {
 
                             <div><img src="circle-cropped.png" className="small-circle"/></div>
                             <div><h4>AM Routine</h4><h4><span className="green">-Routine Completed-</span></h4></div>
-                            <div><Button color="warning"><strong>ADD JOURNAL ENTRY</strong></Button></div>
+                            <div><a href="/addjournals"><Button color="warning"><strong>ADD JOURNAL ENTRY</strong></Button></a></div>
 
                         </Col>
 
@@ -51,7 +51,7 @@ class home extends React.Component {
 
                             <div><img src="moon.png" className="small-circle"/></div>
                             <div><h4>PM Routine</h4><h4><span className="red">-Routine Incomplete-</span></h4></div>
-                            <div><Button color="warning"><strong>ADD JOURNAL ENTRY</strong></Button></div>
+                            <div><a href="/addjournals"><Button color="warning"><strong>ADD JOURNAL ENTRY</strong></Button></a></div>
 
                         </Col>
 
@@ -62,7 +62,7 @@ class home extends React.Component {
 
                         <Row>
                             <Col>
-                                <a href="/journal"><img border="1" alt="Journals" src="book-open-solid.png" width="100" height="100"/></a>
+                                <a href="/journals"><img border="1" alt="Journals" src="book-open-solid.png" width="100" height="100"/></a>
                                 <h2>Journals</h2>
                             </Col>
 
