@@ -70,7 +70,7 @@ module.exports = (db) => {
                                 journals : callback
                                     }
 
-                            response.render('./journals/allJournals', data);
+                            response.render('./journals/allJournals');
         });
     };
 

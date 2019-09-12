@@ -6,10 +6,11 @@ import { Container, Row, Col, Button, Form, FormGroup, Label, Input, FormText, C
 class alljournals extends React.Component {
     render() {
 
-    // let journals = this.props.alljournals;
+    let journals = this.props
+    console.log("journalsssssssssssss",journals)
 
     // if (journals !== null ) {
-    //     journalPage = journal.map(oneItem =>
+    //     journalPage = journals.map(oneItem =>
 
     //         (<Col>
 

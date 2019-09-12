@@ -40,10 +40,12 @@ module.exports = (dbPoolInstance) => {
         });
     };
 
-    let viewAllJournals = (data, callback) =>  {
+    let viewAllJournals = (username, callback) =>  {
 
         let query = 'SELECT * FROM journals WHERE username = $1 RETURNING *';
-        let values = [data];
+        let values = [username];
+
+        console.log("Valuessssssssssssssssssssss",values)
 
          dbPoolInstance.query(query, values, (error, queryResult) => {
             if (error) {
