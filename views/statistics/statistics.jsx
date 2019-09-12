@@ -25,7 +25,7 @@ class statistics extends React.Component {
                                             <div className="canvas-containter">
 
                                                     <h3><strong>This chart shows your progress based on your journal entries.</strong></h3>
-                                                    <h4><strong>For the month of {moment().format('Do MMMM')}.</strong></h4>
+                                                    <h4><strong>For the month of {moment().format(' MMMM')}.</strong></h4>
 
                                                 <canvas id="myChart2" width="500px" height="500px"></canvas>
                                             </div>
@@ -38,7 +38,7 @@ class statistics extends React.Component {
 
 
                                                 <h3><strong>This chart shows your counts for your own daily rating.</strong></h3>
-                                                <h4><strong>For the month of {moment().format('Do MMMM')}.</strong></h4>
+                                                <h4><strong>For the month of {moment().format(' MMMM')}.</strong></h4>
 
                                             <canvas id="myChart" width="500px" height="500px"></canvas>
                                         </div>

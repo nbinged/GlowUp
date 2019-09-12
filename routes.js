@@ -50,6 +50,8 @@ module.exports = (app, allModels) => {
     app.get('/addjournals', journalsControllerCallbacks.viewAddJournals);
     app.post('/addjournals', journalsControllerCallbacks.addSingleJournals);
 
+    app.get('/alljournals', journalsControllerCallbacks.allJournalsIndex);
+
     //Not completed yet.
     // app.post('/addjournals', upload.single('image_file'),journalsControllerCallbacks.addItem);s
     // app.get('/journals/:id', journalsControllerCallbacks.getViewedItem);

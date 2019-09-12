@@ -40,14 +40,44 @@ module.exports = (dbPoolInstance) => {
         });
     };
 
+    let viewAllJournals = (data, callback) =>  {
+
+        let query = 'SELECT * FROM journals WHERE username = $1 RETURNING *';
+        let values = [data];
+
+         dbPoolInstance.query(query, values, (error, queryResult) => {
+            if (error) {
+
+                // invoke callback function with results after query has executed
+                callback(error, null);
+                // console.log('error in the models. Query error')
+
+            } else {
+                // invoke callback function with results after query has executed
+
+                if (queryResult.rows.length > 0) {
+                    callback(null, queryResult.rows);
+                    // console.log('model database');
+                    console.log(queryResult.rows);
+                    console.log('database query works')
+
+                } else {
+
+                    callback(null, null);
+                    console.log('error')
+
+                }
+            }
+        });
+    };
+
+
     return {
 
-        addSingleJournals
-
+        addSingleJournals,
+        viewAllJournals
     };
 };
-
-        // getAllJournals,
         // viewSingleJournal,
         // viewEditSingleJournal,
         // viewDeleteJournal,

@@ -62,7 +62,7 @@ class home extends React.Component {
 
                         <Row>
                             <Col>
-                                <a href="/journals"><img border="1" alt="Journals" src="book-open-solid.png" width="100" height="100"/></a>
+                                <a href="/alljournals"><img border="1" alt="Journals" src="book-open-solid.png" width="100" height="100"/></a>
                                 <h2>Journals</h2>
                             </Col>
 

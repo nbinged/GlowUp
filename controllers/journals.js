@@ -42,7 +42,6 @@ module.exports = (db) => {
                 }
     };
 
-
     let addJournalsControllerCallback = (request, response) => {
 
                 // let cookierequest = request.cookies;
@@ -58,6 +57,23 @@ module.exports = (db) => {
         });
     };
 
+    let allJournalsControllerCallback = (request, response) => {
+
+                // let cookierequest = request.cookies;
+                let cookieName = request.cookies.username;
+                // console.log("coookieeeeessssssssssssssssssssssss",cookieName,new Date())
+
+                    db.journals.viewAllJournals(request.body, (error, callback) => {
+
+                        let data = {
+                                username : cookieName,
+                                journals : callback
+                                    }
+
+                            response.render('./journals/allJournals', data);
+        });
+    };
+
     /**
      * ===========================================
      * Export controller functions as a module
@@ -67,7 +83,9 @@ module.exports = (db) => {
     return {
 
            viewAddJournals: viewAddJournalsControllerCallback,
-           addSingleJournals : addJournalsControllerCallback
+           addSingleJournals : addJournalsControllerCallback,
+
+           allJournalsIndex : allJournalsControllerCallback
 
 //         getEditJournals: editViewedJournalsControllerCallback,
 //         editJournals: editJournalsControllerCallback,
@@ -76,5 +94,4 @@ module.exports = (db) => {
 //         deleteJournals: deleteJournalsControllerCallback
 
     };
-
 }
