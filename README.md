@@ -1,20 +1,18 @@
-# GA SEI Project 4- GlowUp
+# GlowUp -  GA SEI Project 4
 
-Title:
+Title: GlowUp
 
-Url: 
-
-
-
-- - - - - 
+Url: https://glowupapp.herokuapp.com/
 
 
+Explanations of the technologies used
 
-- - - - - 
+A couple paragraphs about the general approach you took
 
-Future features:
+Installation instructions for any dependencies
 
+Link to your user stories
 
-- - - - - 
+Link to your wireframes
 
-Wireframe:
+Descriptions of any unsolved problems or major hurdles your team had to overcome
