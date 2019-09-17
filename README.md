@@ -1,6 +1,6 @@
-# GlowUp -  GA SEI Project 4
+# GlowUp
 
-Title: GlowUp
+
 
 Url: https://glowupapp.herokuapp.com/
 
