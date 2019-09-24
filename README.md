@@ -1,6 +1,6 @@
 # GlowUp
 
-<img src="images/homepage-screenshot.png">
+<img src="src/client/images/homepage-screenshot.png">
 
 <p><b>GA's Software Engineering Immersive:</b> Project 4</p>
 <b>Url:</b> https://glowupapp.herokuapp.com/
