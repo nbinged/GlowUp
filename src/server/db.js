@@ -18,9 +18,9 @@ if (process.env.DATABASE_URL) {
   };
 } else {
   configs = {
-    user: 'akira',
+    user: 'postgres',
     host: '127.0.0.1',
-    database: 'testdb',
+    database: 'glowedup',
     port: 5432
   };
 }
