@@ -1,0 +1,36 @@
+//Backgrounds
+.home-bg {
+  background-image: url('./home-bg.jpg');
+  background-size: cover;
+  height: calc(35vh);
+}
+
+.column-background {
+  background-color: #FAFAFA;
+  min-height: 100%;
+  width: 100%;
+  height: 100vh;
+}
+
+//Used for buttons
+.small-circle {
+  max-width: 100px;
+}
+
+//Element alignment
+.text-align-center {
+  display: flex;
+  justify-content: space-evenly;
+  vertical-align: baseline;
+}
+
+.div-align-center {
+  text-align: center;
+}
+
+.welcome-text {
+  text-align: left;
+  justify-content: center;
+  padding-top: 50px;
+  font-family: 'Libre Caslon Text', serif;
+}

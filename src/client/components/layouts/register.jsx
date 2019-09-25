@@ -1,5 +1,4 @@
-var React = require('react');
-import { Container, Row, Col } from 'reactstrap';
+import React from 'react';
 
   var styles1 = {
         backgroundColor: '#FEC135',
@@ -11,9 +10,8 @@ import { Container, Row, Col } from 'reactstrap';
 class RegisterPage extends React.Component {
     render() {
         return (
-            <html>
+          <div>
 
-            <head>
                 <title>Register</title>
 
                 <link rel="icon" href="/favicon.png" type="image/png" sizes="16x16"/>
@@ -22,12 +20,11 @@ class RegisterPage extends React.Component {
                       crossOrigin="anonymous"/>
                 <link href="https://fonts.googleapis.com/css?family=Merienda&display=swap" rel="stylesheet"/>
                 <link rel="stylesheet" type="text/css" href="/style.css"/>
-            </head>
 
                         <nav className="navbar navbar-expand-lg" style={styles1}>
                           <a className="navbar-nav navbar-center navbar-brand">GlowUp</a>
 
-                          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"  aria-expanded="false" aria-label="Toggle navigation">
 
                             <span className="navbar-toggler-icon"></span>
                           </button>
@@ -50,11 +47,10 @@ class RegisterPage extends React.Component {
 
                     {this.props.children}
 
-                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossOrigin="anonymous"></script>
-
-            </html>
+                    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossOrigin="anonymous"></script>
+          </div>
         );
     }
 }
 
-module.exports = RegisterPage;
+export default RegisterPage;

@@ -1,13 +1,13 @@
-const React = require('react');
-var RegisterPage = require('./layouts/register');
-import { Container, Row, Col, Button, Form, FormGroup, Label, Input, FormText} from 'reactstrap';
+import React from 'react';
+import { Container, Row, Col, Button, Form, FormGroup, Label, Input} from 'reactstrap';
+import RegisterPage from '../layouts/register';
+import './register-style.scss';
 
-export default class register extends React.Component {
+class Register extends React.Component {
   render() {
 
     let registerURL = `/register`;
     let loginURL = `/login`;
-
 
     return (
 
@@ -65,4 +65,4 @@ export default class register extends React.Component {
   }
 }
 
-module.exports = register;
+export default Register;

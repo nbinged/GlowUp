@@ -1,0 +1,45 @@
+.item-image{
+  max-width: 500px;
+  max-height: 500px;
+  margin: 20px;
+  padding-top:20px;
+}
+
+.skin_rating_scale input{
+  margin:0;padding:0;
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  appearance:none;
+}
+
+.skin-rating-1{background-image:url(./poo-solid.svg);}
+.skin-rating-2{background-image:url(./frown-solid.svg);}
+.skin-rating-3{background-image:url(./meh-solid.svg);}
+.skin-rating-4{background-image:url(./smile-solid.svg);}
+.skin-rating-5{background-image:url(./grin-hearts-solid.svg);}
+
+.skin_rating_scale input:active +.radioimage{opacity: .9;}
+.skin_rating_scale input:checked +.radioimage{
+  -webkit-filter: none;
+  -moz-filter: none;
+  filter: none;
+}
+
+.radioimage{
+  cursor:pointer;
+  background-size:contain;
+  background-repeat:no-repeat;
+  display:inline-block;
+  width:100px;height:100px;
+  -webkit-transition: all 100ms ease-in;
+  -moz-transition: all 100ms ease-in;
+  transition: all 100ms ease-in;
+  -webkit-filter: brightness(1.8) grayscale(1) opacity(.7);
+  -moz-filter: brightness(1.8) grayscale(1) opacity(.7);
+  filter: brightness(1.8) grayscale(1) opacity(.7);
+}
+.radioimage:hover{
+  -webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
+  -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
+  filter: brightness(1.2) grayscale(.5) opacity(.9);
+}
