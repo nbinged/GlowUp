@@ -1,19 +1,17 @@
-const React = require('react');
-var LoginPage = require('./layouts/login');
+import React from 'react';
+import LoginNav from '../layouts/login';
 import { Container, Row, Col, Button, Form, FormGroup, Label, Input, FormText} from 'reactstrap';
 
-export default class login extends React.Component {
+class Login extends React.Component {
   render() {
 
     let loginURL = `/login`;
     let registerURL = `/register`;
 
-
     return (
 
-<LoginPage>
-
         <Container fluid>
+          <LoginNav/>
 
             <Row className="login-reg-background-image">
 
@@ -47,7 +45,7 @@ export default class login extends React.Component {
         <h6>Dont have an account? Create one instead!</h6>
 
             <Form action={registerURL}>
-            <Button type={"submit"} size="lg">Register</Button>
+                <Button type={"submit"} size="lg">Register</Button>
             </Form>
 
       </Col>
@@ -56,10 +54,8 @@ export default class login extends React.Component {
 
     </Container>
 
-</LoginPage>
-
     );
   }
 }
 
-module.exports = login;
+export default Login;

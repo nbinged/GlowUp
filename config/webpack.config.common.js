@@ -1,3 +1,4 @@
+
 const {resolve, join} = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -40,30 +41,30 @@ module.exports = {
         use: ExtractTextPlugin.extract({
           fallback: {
             loader: 'style-loader',
-            options: {sourceMap: IS_DEV}
+            // options: {sourceMap: IS_DEV}
           },
           use: [
             {
               loader: 'css-loader',
               options: {
-                localIdentName: IS_DEV ? '[path]-[name]_[local]' : '[name]_[local]_[hash:5]', // [hash:base64]
-                modules: true,
-                sourceMap: IS_DEV
+                // localIdentName: IS_DEV ? '[path]-[name]_[local]' : '[name]_[local]_[hash:5]', // [hash:base64]
+                modules: true
+                // sourceMap: IS_DEV
               }
             },
             {
               loader: 'sass-loader',
-              options: {sourceMap: IS_DEV}
+              // options: {sourceMap: IS_DEV}
             },
             {
               loader: 'postcss-loader',
-              options: {sourceMap: IS_DEV}
+              // options: {sourceMap: IS_DEV}
             }
           ]
         })
       },
       {
-        test: /\.(eot|svg|ttf|woff|woff2)$/,
+        test: /\.(eot|svg|ttf|woff|woff2|jpg)$/,
         loader: 'file-loader'
       }
     ]

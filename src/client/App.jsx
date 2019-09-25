@@ -1,6 +1,8 @@
 import React from 'react';
 import { hot } from 'react-hot-loader';
-import Register from './components/register/register';
+
+// import Register from './components/register/register';
+// import Login from './components/login/login';
 
 class App extends React.Component {
 
@@ -8,7 +10,8 @@ class App extends React.Component {
     return (
       <div>
 
-        <Register />
+        {/*<Register />*/}
+        {/*<Login/>*/}
 
       </div>
     );

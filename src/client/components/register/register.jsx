@@ -1,7 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Button, Form, FormGroup, Label, Input} from 'reactstrap';
-import RegisterPage from '../layouts/register';
-import './register-style.scss';
+import RegisterNav from '../layouts/register';
 
 class Register extends React.Component {
   render() {
@@ -11,55 +10,52 @@ class Register extends React.Component {
 
     return (
 
-<RegisterPage>
+      <Container fluid>
 
-        <Container fluid>
-        <Row className="login-reg-background-image">
+        <RegisterNav/>
 
-        <Col xs="6"></Col>
+            <Row className="login-reg-background-image">
 
-        <Col xs="6" md={{ size: 4, offset: 0.5 }} className="empty-background">
+              <Col xs="6"></Col>
 
-            <h4>Welcome to</h4>
-            <h1 className="font-merienda" style={{color : '#FEC135'}}><strong>GlowUp</strong></h1>
-            <br/>
+                <Col xs="6" md={{ size: 4, offset: 0.5 }} className="empty-background">
 
-            <p> Please <font color="orange"><strong>make an account</strong></font> so you can track and analyze your skin changes accurately over time.</p>
+                    <h4>Welcome to</h4>
+                    <h1 className="font-merienda" style={{color : '#FEC135'}}><strong>GlowUp</strong></h1>
+                    <br/>
 
-            <br/>
+                    <p> Please <font color="orange"><strong>make an account</strong></font> so you can track and analyze your skin changes accurately over time.</p>
 
-    <Form method="POST" action={registerURL}>
+                    <br/>
 
-        <FormGroup>
-          <Label for="Username"><strong>Username:</strong></Label>
-          <Input type="text" name="username" required/>
-        </FormGroup>
+                    <Form method="POST" action={registerURL}>
 
-        <FormGroup>
-          <Label for="Password"><strong>Password:</strong></Label>
-          <Input type="password" name="password" required/>
-        </FormGroup>
+                      <FormGroup>
+                        <Label for="Username"><strong>Username:</strong></Label>
+                        <Input type="text" name="username" required/>
+                      </FormGroup>
 
-        <Button type={"submit"} color="warning" size="lg" block><strong>Sign up</strong></Button>
-      </Form>
+                      <FormGroup>
+                        <Label for="Password"><strong>Password:</strong></Label>
+                        <Input type="password" name="password" required/>
+                      </FormGroup>
 
-            <br/>
-            <br/>
+                      <Button type={"submit"} color="warning" size="lg" block><strong>Sign up</strong></Button>
+                    </Form>
 
-        <h6>Already have an account? Login instead!</h6>
+                    <br/>
+                    <br/>
 
-            <Form action={loginURL}>
-            <Button type={"submit"} size="lg" >Login</Button>
-            </Form>
+                    <h6>Already have an account? Login instead!</h6>
 
+                    <Form action={loginURL}>
+                      <Button type={"submit"} size="lg" >Login</Button>
+                    </Form>
 
-    </Col>
+                </Col>
 
-    </Row>
-
-    </Container>
-
-</RegisterPage>
+            </Row>
+        </Container>
 
     );
   }
