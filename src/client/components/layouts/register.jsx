@@ -1,4 +1,8 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
+import Login from '../login/login';
+import Register from '../register/register';
 
   var styles1 = {
         backgroundColor: '#FEC135',
@@ -19,19 +23,31 @@ class RegisterNav extends React.Component {
                             <span className="navbar-toggler-icon"></span>
                           </button>
 
-                          <div className="collapse navbar-collapse" id="navbar Nav">
-                              <ul className="navbar-nav ml-auto">
+                          <Router>
+
+                            <div>
+                              <nav>
+                                <div className="collapse navbar-collapse" id="navbar Nav">
+                                  <ul className="navbar-nav ml-auto">
 
 
-                                  <li className="nav-item">
-                                      <a className="nav-link" href="/login">Login</a>
-                                  </li>
+                                    <li className="nav-item">
+                                      <Link to="/login/">Login</Link>
+                                    </li>
 
-                                  <li className="nav-item">
-                                      <a className="nav-link" href="/register">Register</a>
-                                  </li>
-                              </ul>
-                          </div>
+                                    <li className="nav-item">
+                                      <Link to="/register/">Register</Link>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </nav>
+                            </div>
+
+                              <Route path="/login/" component={Login} />
+                              <Route path="/register/" component={Register} />
+
+                          </Router>
+
             </nav>
 
         );
