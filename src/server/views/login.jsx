@@ -1,5 +1,5 @@
 import React from 'react';
-import LoginNav from '../layouts/login';
+import LoginNav from './layouts/login';
 import { Container, Row, Col, Button, Form, FormGroup, Label, Input, FormText} from 'reactstrap';
 
 class Login extends React.Component {

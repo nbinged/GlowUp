@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
   var styles1 = {
         backgroundColor: '#418D3A',
@@ -23,13 +22,13 @@ class LoginNav extends React.Component {
                           <div className="collapse navbar-collapse" id="navbarNav">
                             <ul className="navbar-nav ml-auto">
 
-                              <Link to="/login">
-                                <li className="nav-item">Login</li>
-                              </Link>
+                              {/*<Link to="/login">*/}
+                              {/*  <li className="nav-item">Login</li>*/}
+                              {/*</Link>*/}
 
-                              <Link to="/register">
-                                <li className="nav-item">Register</li>
-                              </Link>
+                              {/*<Link to="/register">*/}
+                              {/*  <li className="nav-item">Register</li>*/}
+                              {/*</Link>*/}
 
                             </ul>
                           </div>

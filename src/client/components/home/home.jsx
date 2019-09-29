@@ -87,17 +87,3 @@ class home extends React.Component {
 }
 
 module.exports = home;
-
-// <Button className="outfit" formaction={addOutfitURL} type={"submit"} color="success" size="lg">Create a new Outfit</Button>
-
-		// <Row className="cardHolder">
-		// </Row>
-
-                            //         <Col>
-                            //     <h1>Stats</h1>
-                            // </Col>
-
-
-                            // SELECT * FROM journals WHERE user_id = $1
-
-                            // let arr = queryResult.rows.map(x=>x.skin_rating)

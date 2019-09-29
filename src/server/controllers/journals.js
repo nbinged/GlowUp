@@ -1,7 +1,7 @@
 var sha256 = require('js-sha256');
-var cloudinary = require('cloudinary');
-var multer = require('multer');
-var upload = multer({ dest: './uploads/' });
+// var cloudinary = require('cloudinary');
+// var multer = require('multer');
+// var upload = multer({ dest: './uploads/' });
 const SALT = "salt";
 
 // cloudinary.config({

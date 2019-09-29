@@ -1,6 +1,7 @@
 const pg = require('pg');
-// const products = require('./models/products');
 const url = require('url');
+// const products = require('./models/products');
+const users = require('./models/users');
 
 var configs;
 
@@ -37,6 +38,7 @@ module.exports = {
    */
 
   // products: products(pool),
+  users: users(pool),
 
   //make queries directly from here
   queryInterface: (text, params, callback) => {

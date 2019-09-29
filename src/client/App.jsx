@@ -12,15 +12,15 @@ class App extends React.Component {
     return (
         <div>
 
-          <Router>
+          {/*<Router>*/}
 
-            {/*<Register />*/}
-            {/*<Login />*/}
+          {/*  <Switch>*/}
+          {/*      /!*<Route path="/" exact component={Home} />*!/*/}
+          {/*      <Route path="/login" component={Login} />*/}
+          {/*      <Route path="/register" component={Register} />*/}
+          {/*  </Switch>*/}
 
-            <Route path="/login" component={Login} />
-            <Route path="/register" component={Register} />
-
-          </Router>
+          {/*</Router>*/}
 
         </div>
     );

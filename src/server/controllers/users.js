@@ -12,7 +12,7 @@ module.exports = (db) => {
      */
 
      let indexControllerCallback = (request, response) => {
-      response.redirect('register');
+      response.render('register');
     };
 
     let showRegisterControllerCallback = (request, response) => {
@@ -24,7 +24,7 @@ module.exports = (db) => {
         let password = sha256(request.body.password);
         db.users.checkUserAccount(username,(error, callback) => {
             if (callback) {
-                response.redirect('/?err=register');
+                response.render('register');
                 console.log("something went wrong in the users models")
             }
             else {
@@ -33,11 +33,11 @@ module.exports = (db) => {
                         response.cookie('logged_in', sha256(callback[0].username+"loggedin"+SALT));
                         response.cookie('username', callback[0].username);
                         response.cookie('userID', callback[0].id)
-                        response.redirect('/home');
+                        response.render('/home');
                         console.log("new account created successfully")
                     }
                     else {
-                        response.redirect('/?err=register');
+                        response.render('register');
                         console.log("something went wrong in the users models")
                     }
                 });
@@ -47,40 +47,43 @@ module.exports = (db) => {
 
     let showLoginControllerCallback = (request, response) => {
       response.render('login');
-      console.log("logged in")
+      // console.log("logged in")
     };
 
     let loginControllerCallback = (request, response) => {
+
         let username = request.body.username;
         let password = sha256(request.body.password);
-        db.users.checkUserAccount(username,(error, callback) => {
-            if (callback) {
-                db.users.logInUser(username, password,(error, callback) => {
-                    if (callback) {
+        console.log(username);
+        console.log(password);
 
-                        let hashedCookie = sha256(callback[0].username+'loggedin'+SALT);
-                        response.cookie('logged_in', hashedCookie);
-                        response.cookie('username', callback[0].username);
-                        response.cookie('userID', callback[0].id);
-                        response.redirect('/home');
-                        console.log('User is logged in')
-                    }
-                    else {
-                        response.redirect('/?err=login');
-                    }
-                });
-            }
-            else {
+        // db.users.checkUserAccount(username,(error, callback) => {
+        //     if (callback) {
+        //
+                console.log("controller usernamessssssssssssssssssssssssssss",username);
+
+        db.users.logInUser(username, password, (error, callback) => {
+            if (callback) {
+
+                let hashedCookie = sha256(callback[0].username + 'loggedin' + SALT);
+                response.cookie('logged_in', hashedCookie);
+                response.cookie('username', callback[0].username);
+                response.cookie('userID', callback[0].id);
+                console.log('User is logged in')
+
+            } else {
+                console.log("3 Error during login");
                 response.redirect('/?err=login')
             }
         });
-    };
+    }
 
     let logoutControllerCallback = (request, response) => {
         response.clearCookie('logged_in');
         response.clearCookie('username');
         response.clearCookie('userID');
-        response.redirect('/login');
+        console.log("User logged out")
+        // response.redirect('/login');
     };
 
 

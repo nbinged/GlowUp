@@ -23,13 +23,13 @@ class RegisterNav extends React.Component {
                                 <div className="collapse navbar-collapse" id="navbar Nav">
                                   <ul className="navbar-nav ml-auto">
 
-                                    <Link to="/login">
-                                      <li className="nav-item">Login</li>
-                                    </Link>
+                                    {/*<Link to="/login">*/}
+                                    {/*  <li className="nav-item">Login</li>*/}
+                                    {/*</Link>*/}
 
-                                    <Link to="/register">
-                                        <li className="nav-item">Register</li>
-                                    </Link>
+                                    {/*<Link to="/register">*/}
+                                    {/*    <li className="nav-item">Register</li>*/}
+                                    {/*</Link>*/}
 
                                   </ul>
                                 </div>
