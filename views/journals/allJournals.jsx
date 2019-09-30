@@ -1,37 +1,37 @@
 const React = require('react');
 var Default = require('../layouts/default');
 
-import { Container, Row, Col, Button, Form, FormGroup, Label, Input, FormText, Card, CardBody, CardTitle, CardText, CardImg} from 'reactstrap';
+import { Container, Row, Col, Button, Form, FormGroup, Label, Input, FormText, Card, CardBody, CardTitle, CardText, CardImg, CardSubtitle} from 'reactstrap';
 
 class alljournals extends React.Component {
     render() {
 
     let journals = this.props.alluserjournals;
+    let journalPage = '';
 
     console.log("journalsssssssssssss",journals);
 
-    // if (journals !== null ) {
-    //     journalPage = journals.map(oneItem =>
-    //
-    //         (<Col>
-    //
-    // <div>
-    //   <Card>
-    //     <CardImg top width="100%" alt="Card image cap" />
-    //     <CardBody>
-    //       <CardTitle>journalPage.</CardTitle>
-    //       <CardSubtitle>Card subtitle</CardSubtitle>
-    //       <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
-    //       <Button>Button</Button>
-    //     </CardBody>
-    //   </Card>
-    // </div>
-    //
-    //     </Col>));
-    //
-    // } else {
-    //     journalPage = '';
-    // }
+    if (journals !== null ) {
+        journalPage = journals.map(oneJournal =>
+
+            (<Col>
+
+    <div>
+      <Card>
+        <CardImg top width="100%" alt="Card image cap" />
+        <CardBody>
+          <CardTitle>{(oneJournal.journal_date).toLocaleDateString()}</CardTitle>
+          <CardSubtitle>Card subtitle</CardSubtitle>
+          <CardText>{oneJournal.journal_notes}</CardText>
+        </CardBody>
+      </Card>
+    </div>
+
+        </Col>));
+
+    } else {
+        journalPage = '';
+    }
 
     return (
 
@@ -42,8 +42,8 @@ class alljournals extends React.Component {
 
                 <Col className="column-middle">
 
-
-
+                    <br/>
+                    {journalPage}
 
                 </Col>
 
