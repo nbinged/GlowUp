@@ -63,14 +63,16 @@ module.exports = (db) => {
                 let cookieName = request.cookies.username;
                 // console.log("coookieeeeessssssssssssssssssssssss",cookieName,new Date())
 
-                    db.journals.viewAllJournals(request.body, (error, callback) => {
+                    db.journals.viewAllJournals(cookieName, (error, callback) => {
 
                         let data = {
                                 username : cookieName,
-                                journals : callback
+                                alluserjournals : callback
                                     }
 
-                            response.render('./journals/allJournals');
+                                    // console.log("dataaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",data)
+
+                            response.render('./journals/allJournals', data);
         });
     };
 
