@@ -40,24 +40,25 @@ class addJournals extends React.Component {
 
                                 <FormGroup>
                                         <div class="cc-selector">
-                                            <Label for="journal_date"><strong>Skin Rating upon 5:</strong></Label>
+
+                                            <Label for="skin_rating"><strong>Skin Rating upon 5:</strong></Label>
+
                                             <br/>
+
                                             <Row>
-
-
-                                                <input id="skin-rating-1" type="radio" name="credit-card" value="1"/>
+                                                <input id="skin-rating-1" type="radio" name="skin_rating" value="1"/>
                                                 <label className="drinkcard-cc skin-rating-1" htmlFor="skin-rating-1"></label>
 
-                                                <input id="skin-rating-2" type="radio" name="credit-card" value="2"/>
+                                                <input id="skin-rating-2" type="radio" name="skin_rating" value="2"/>
                                                 <label className="drinkcard-cc skin-rating-2" htmlFor="skin-rating-2"></label>
 
-                                                <input id="skin-rating-3" type="radio" name="credit-card" value="3"/>
+                                                <input id="skin-rating-3" type="radio" name="skin_rating" value="3"/>
                                                 <label className="drinkcard-cc skin-rating-3" htmlFor="skin-rating-3"></label>
 
-                                                <input id="skin-rating-4" type="radio" name="credit-card" value="4"/>
+                                                <input id="skin-rating-4" type="radio" name="skin_rating" value="4"/>
                                                 <label className="drinkcard-cc skin-rating-4" htmlFor="skin-rating-4"></label>
 
-                                                <input id="skin-rating-5" type="radio" name="credit-card" value="5"/>
+                                                <input id="skin-rating-5" type="radio" name="skin_rating" value="5"/>
                                                 <label className="drinkcard-cc skin-rating-5" htmlFor="skin-rating-5"></label>
                                             </Row>
                                         </div>
