@@ -1,0 +1,221 @@
+body{
+    overflow-x:hidden;
+    overflow-y:hidden;
+}
+
+h1 {
+    font-size: -webkit-xxx-large;
+}
+
+.font-merienda {
+    font-family: 'Merienda', cursive;
+    font-size:60px;
+/*    margin:5px;*/
+}
+
+.navbar-nav.navbar-center.navbar-brand {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+    font-family: 'Merienda', cursive;
+    font-weight: bold;
+}
+
+.nav-link {
+
+    color: black;
+    font-family: Century-Gothic, Arial;
+    font-weight: bold;
+}
+
+.login-reg-background-image {
+    background-image: url('./logbg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: calc(100vh - 56px);
+    background-position: top;
+}
+
+.home-bg {
+    background-image: url('./home-bg.jpg');
+    background-size: cover;
+    height: calc(35vh);
+}
+
+.item-image{
+    max-width: 500px;
+    max-height: 500px;
+    margin: 20px;
+    padding-top:20px;
+}
+
+.welcome-text {
+    text-align: left;
+    justify-content: center;
+    padding-top: 50px;
+    font-family: 'Libre Caslon Text', serif;
+}
+
+.empty-background {
+    text-align: left;
+    padding: 30px;
+    flex-direction: column;
+    float-left: left;
+    vertical-align: middle;
+}
+
+.cloth-image-card {
+      max-width: 100%;
+      height: auto;
+}
+
+.container text-center {
+    text-align: left;]
+}
+
+
+.card-img-top {
+    max-height: 434px;
+/*    max-width: 434px;*/
+    object-fit: contain;
+    padding-top: 15px;
+}
+
+.card-title {
+    color: black;
+    font-family: 'Libre Caslon Text', serif;
+    text-align: center;
+}
+
+.card-text {
+    color: black;
+    font-family: 'Libre Caslon Text', serif;
+    text-align: center;
+}
+
+.request-text {
+    padding- top: 25px;
+    font-family: 'Libre Caslon Text', serif;
+}
+
+.col-sm-12 col-md-6 offset-md-4 {
+align-content: center;
+}
+
+.item-buttons {
+    display: inline-block;
+    margin: 10px;
+    padding:10px;
+    justify-content: left;
+    color: white;
+}
+
+.cardHolder {
+ display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+  margin-top: 3rem;
+}
+
+.column-center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+/*        text-align: center;*/
+}
+
+.column-background {
+/*  background-color: #B7E4EA;*/
+  background-color: #FAFAFA;
+  min-height: 100%;
+  width: 100%;
+  height: 100vh;
+}
+
+.list-group-item {
+    min-width: 550px;
+}
+
+.form-control {
+    min-width: 550px;
+}
+
+.nav-link-white {
+    display: block;
+    padding: .5rem 1rem;
+    color: white;
+    font-family: Century-Gothic, Arial;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.small-circle {
+	max-width: 100px;
+}
+
+.routine-completion {
+    display: flex;
+    justify-content: space-around;
+
+  align-self: center;
+}
+
+.canvas-containter {
+    height: 600px;
+    width: 600px;
+    margin: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.skin_rating_scale input{
+    margin:0;padding:0;
+    -webkit-appearance:none;
+       -moz-appearance:none;
+            appearance:none;
+}
+
+.skin-rating-1{background-image:url(./poo-solid.svg);}
+.skin-rating-2{background-image:url(./frown-solid.svg);}
+.skin-rating-3{background-image:url(./meh-solid.svg);}
+.skin-rating-4{background-image:url(./smile-solid.svg);}
+.skin-rating-5{background-image:url(./grin-hearts-solid.svg);}
+
+.skin_rating_scale input:active +.radioimage{opacity: .9;}
+.skin_rating_scale input:checked +.radioimage{
+    -webkit-filter: none;
+       -moz-filter: none;
+            filter: none;
+}
+
+.radioimage{
+    cursor:pointer;
+    background-size:contain;
+    background-repeat:no-repeat;
+    display:inline-block;
+    width:100px;height:100px;
+    -webkit-transition: all 100ms ease-in;
+       -moz-transition: all 100ms ease-in;
+            transition: all 100ms ease-in;
+    -webkit-filter: brightness(1.8) grayscale(1) opacity(.7);
+       -moz-filter: brightness(1.8) grayscale(1) opacity(.7);
+            filter: brightness(1.8) grayscale(1) opacity(.7);
+}
+.radioimage:hover{
+    -webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
+       -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
+            filter: brightness(1.2) grayscale(.5) opacity(.9);
+}
