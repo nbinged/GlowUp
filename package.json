@@ -1,0 +1,40 @@
+{
+  "name": "express-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "engines": {
+    "node": "v8.10.0"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.22",
+    "@fortawesome/free-brands-svg-icons": "^5.10.2",
+    "@fortawesome/free-regular-svg-icons": "^5.10.2",
+    "@fortawesome/free-solid-svg-icons": "^5.10.2",
+    "@fortawesome/react-fontawesome": "^0.1.4",
+    "@material-ui/core": "^4.3.0",
+    "@material-ui/icons": "^4.2.1",
+    "body-parse": "^0.1.0",
+    "chart.js": "^2.8.0",
+    "cloudinary": "^1.14.0",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.17.1",
+    "express-react-views": "^0.10.5",
+    "jquery": "^3.4.1",
+    "js-sha256": "^0.9.0",
+    "method-override": "^2.3.10",
+    "moment": "^2.24.0",
+    "multer": "^1.4.2",
+    "nodemon": "^1.19.2",
+    "pg": "^7.4.3",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "reactstrap": "^8.0.1"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.10.2"
+  }
+}

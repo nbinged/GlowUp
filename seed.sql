@@ -1,0 +1,1 @@
+INSERT INTO journals (journal_date, skin-rating, journal-notes, item_brand, item_size, item_color, item_catergories, image_file) VALUES ('1', 'test', 'jeans', 'pull and bear', '32', 'indigo', 'bottoms', 'https://static.pullandbear.net/2/photos/2019/I/0/2/p/5683/552/407/5683552407_1_1_3.jpg?t=1557242166111');
