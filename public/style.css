@@ -171,51 +171,42 @@ align-content: center;
 }
 
 
+/*//////////////////////////*/
 
-
-
-
-
-
-
-
-
-
-.skin_rating_scale input{
+.cc-selector input{
     margin:0;padding:0;
     -webkit-appearance:none;
-       -moz-appearance:none;
-            appearance:none;
+    -moz-appearance:none;
+    appearance:none;
 }
 
-.skin-rating-1{background-image:url(./poo-solid.svg);}
-.skin-rating-2{background-image:url(./frown-solid.svg);}
-.skin-rating-3{background-image:url(./meh-solid.svg);}
-.skin-rating-4{background-image:url(./smile-solid.svg);}
-.skin-rating-5{background-image:url(./grin-hearts-solid.svg);}
+.skin-rating-1{background-image:url(./poo-solid.gif);}
+.skin-rating-2{background-image:url(./frown-solid.gif);}
+.skin-rating-3{background-image:url(./meh-solid.gif);}
+.skin-rating-4{background-image:url(./smile-solid.gif) ;}
+.skin-rating-5{background-image:url(./grin-hearts-solid.gif);}
 
-.skin_rating_scale input:active +.radioimage{opacity: .9;}
-.skin_rating_scale input:checked +.radioimage{
+.cc-selector input:active +.drinkcard-cc{opacity: .9;}
+.cc-selector input:checked +.drinkcard-cc{
     -webkit-filter: none;
-       -moz-filter: none;
-            filter: none;
+    -moz-filter: none;
+    filter: none;
 }
-
-.radioimage{
+.drinkcard-cc{
     cursor:pointer;
     background-size:contain;
     background-repeat:no-repeat;
     display:inline-block;
-    width:100px;height:100px;
+    width:150px;height:150px;
     -webkit-transition: all 100ms ease-in;
-       -moz-transition: all 100ms ease-in;
-            transition: all 100ms ease-in;
-    -webkit-filter: brightness(1.8) grayscale(1) opacity(.7);
-       -moz-filter: brightness(1.8) grayscale(1) opacity(.7);
-            filter: brightness(1.8) grayscale(1) opacity(.7);
+    -moz-transition: all 100ms ease-in;
+    transition: all 100ms ease-in;
+    -webkit-filter: brightness(1.2)grayscale(0.5) opacity(0.5);
+    -moz-filter: brightness(1.2) grayscale(0.5) opacity(0.5);
+    filter: brightness(1.2) grayscale(0.5) opacity(0.5);
 }
-.radioimage:hover{
-    -webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
-       -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
-            filter: brightness(1.2) grayscale(.5) opacity(.9);
+.drinkcard-cc:hover{
+    -webkit-filter: grayscale(.5) opacity(.9);
+    -moz-filter: grayscale(.5) opacity(.9);
+    filter: grayscale(.5) opacity(.9);
 }

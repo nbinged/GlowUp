@@ -39,22 +39,26 @@ class addJournals extends React.Component {
                                         <br/>
 
                                 <FormGroup>
-                                        <div class="skin_rating_scale">
+                                        <div class="cc-selector">
+                                            <Label for="journal_date"><strong>Skin Rating upon 5:</strong></Label>
+                                            <br/>
                                             <Row>
-                                                <Label class="radioimage skin-rating-1" for="skin-rating-1"></Label>
-                                                <Input id="skin-rating-1" type="radio" name="skin_rating" value="1" required/><br/>
 
-                                                <Label class="radioimage skin-rating-2" for="skin-rating-2"></Label>
-                                                <Input id="skin-rating-2" type="radio" name="skin_rating" value="2" required/><br/>
 
-                                                <Label class="radioimage skin-rating-3" for="skin-rating-3"></Label>
-                                                <Input id="skin-rating-3" type="radio" name="skin_rating" value="3" required/><br/>
+                                                <input id="skin-rating-1" type="radio" name="credit-card" value="1"/>
+                                                <label className="drinkcard-cc skin-rating-1" htmlFor="skin-rating-1"></label>
 
-                                                <Label class="radioimage skin-rating-4" for="skin-rating-4"></Label>
-                                                <Input id="skin-rating-4" type="radio" name="skin_rating" value="4" required/><br/>
+                                                <input id="skin-rating-2" type="radio" name="credit-card" value="2"/>
+                                                <label className="drinkcard-cc skin-rating-2" htmlFor="skin-rating-2"></label>
 
-                                                <Label class="radioimage skin-rating-5" for="skin-rating-5"></Label>
-                                                <Input id="skin-rating-5" type="radio" name="skin_rating" value="5" required/><br/>
+                                                <input id="skin-rating-3" type="radio" name="credit-card" value="3"/>
+                                                <label className="drinkcard-cc skin-rating-3" htmlFor="skin-rating-3"></label>
+
+                                                <input id="skin-rating-4" type="radio" name="credit-card" value="4"/>
+                                                <label className="drinkcard-cc skin-rating-4" htmlFor="skin-rating-4"></label>
+
+                                                <input id="skin-rating-5" type="radio" name="credit-card" value="5"/>
+                                                <label className="drinkcard-cc skin-rating-5" htmlFor="skin-rating-5"></label>
                                             </Row>
                                         </div>
                                 </FormGroup>

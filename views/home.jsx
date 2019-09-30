@@ -82,6 +82,9 @@ class home extends React.Component {
                                 <h2>statistics</h2>
                             </Col>
 
+
+
+
                         </Row>
 				</Col>
 
