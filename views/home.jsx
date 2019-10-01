@@ -61,23 +61,23 @@ class home extends React.Component {
                         <br/>
 
                         <Row>
-                            <Col>
+                            <Col className="align-center">
                                 <a href="/alljournals"><img border="1" alt="Journals" src="book-open-solid.png" width="100" height="100"/></a>
                                 <h2>Journals</h2>
                             </Col>
 
-                            <Col>
+                            {/*<Col>*/}
 
-                                <a href="/routines"><img border="1" alt="Routines" src="user-clock-solid.png" width="100" height="100"/></a>
-                                <h2>Routines</h2>
-                            </Col>
+                            {/*    <a href="/routines"><img border="1" alt="Routines" src="user-clock-solid.png" width="100" height="100"/></a>*/}
+                            {/*    <h2>Routines</h2>*/}
+                            {/*</Col>*/}
 
-                            <Col>
-                                <a href="/products"><img border="1" alt="Routines" src="tint-solid.png" width="100" height="100"/></a>
-                                <h2>Products</h2>
-                            </Col>
+                            {/*<Col>*/}
+                            {/*    <a href="/products"><img border="1" alt="Routines" src="tint-solid.png" width="100" height="100"/></a>*/}
+                            {/*    <h2>Products</h2>*/}
+                            {/*</Col>*/}
 
-                            <Col>
+                            <Col className="align-center">
                                 <a href="/statistics"><img border="1" alt="Routines" src="chart-bar-solid.png" width="100" height="100"/></a>
                                 <h2>statistics</h2>
                             </Col>

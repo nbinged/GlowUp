@@ -210,3 +210,8 @@ align-content: center;
     -moz-filter: grayscale(.5) opacity(.9);
     filter: grayscale(.5) opacity(.9);
 }
+
+.align-center{
+    align-content: center;
+    text-align: center;
+}
