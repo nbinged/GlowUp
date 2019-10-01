@@ -160,8 +160,10 @@ align-content: center;
 .routine-completion {
     display: flex;
     justify-content: space-around;
+    vertical-align: middle;
 
-  align-self: center;
+
+    /*align-self: center;*/
 }
 
 .canvas-containter {

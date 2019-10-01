@@ -39,7 +39,7 @@ class home extends React.Component {
                         <Col className="routine-completion">
 
                             <div><img src="circle-cropped.png" className="small-circle"/></div>
-                            <div><h4>AM Routine</h4><h4><span className="green">-Routine Completed-</span></h4></div>
+                            <div><h2>AM Routine</h2></div>
                             <div><a href="/addjournals"><Button color="warning"><strong>ADD JOURNAL ENTRY</strong></Button></a></div>
 
                         </Col>
@@ -50,7 +50,7 @@ class home extends React.Component {
                         <Col className="routine-completion">
 
                             <div><img src="moon.png" className="small-circle"/></div>
-                            <div><h4>PM Routine</h4><h4><span className="red">-Routine Incomplete-</span></h4></div>
+                            <div><h2>PM Routine</h2></div>
                             <div><a href="/addjournals"><Button color="warning"><strong>ADD JOURNAL ENTRY</strong></Button></a></div>
 
                         </Col>
