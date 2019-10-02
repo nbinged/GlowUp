@@ -18,11 +18,11 @@ class alljournals extends React.Component {
 
     <div>
       <Card>
-        <CardImg top width="100%" alt="Card image cap" />
+        <CardImg src={oneJournal.image_file} />
         <CardBody>
-          <CardTitle>{(oneJournal.journal_date).toLocaleDateString()}</CardTitle>
-          <CardSubtitle>Card subtitle</CardSubtitle>
-          <CardText>{oneJournal.journal_notes}</CardText>
+          <CardTitle>Journal Date: {(oneJournal.journal_date).toLocaleDateString()}</CardTitle>
+          <CardText>Skin rating: {oneJournal.skin_rating}</CardText>
+          <CardText>Notes: {oneJournal.journal_notes}</CardText>
         </CardBody>
       </Card>
     </div>
