@@ -26,7 +26,7 @@ console.log("chartjs")
                 labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4'],
                 datasets: [{
                     label: 'Overall Skin Feel',
-                    data: [2, 1, 2, 4, 5],
+                    data: [2, 0, 0, 0, 0],
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.5)',
                         'rgba(54, 162, 235, 1)',
@@ -69,7 +69,7 @@ console.log("chartjs")
                 datasets: [{
                     label: 'Overall Skin Feel',
                     fill: false,
-                    data: [6, 10, 4, 8, 2, 15],
+                    data: [0, 0, 0, 2, 0],
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.5)',
                         'rgba(54, 162, 235, 0.5)',

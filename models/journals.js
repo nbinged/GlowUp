@@ -44,7 +44,6 @@ module.exports = (dbPoolInstance) => {
 
         let query = 'SELECT * FROM journals WHERE username = $1';
         let values = [username];
-        console.log("valuesssssssssssssss",values)
 
         dbPoolInstance.query(query,values, (error, queryResult) => {
             if (error) {
@@ -58,6 +57,7 @@ module.exports = (dbPoolInstance) => {
 
                 if (queryResult.rows.length > 0) {
                     callback(null, queryResult.rows);
+                    console.log("sucessfull callback")
 
                 } else {
                     callback(null, null);

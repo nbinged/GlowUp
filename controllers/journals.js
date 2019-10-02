@@ -70,7 +70,7 @@ module.exports = (db) => {
                                 alluserjournals : callback
                                     }
 
-                                    // console.log("dataaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",data)
+                                    console.log("dataaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",data)
 
                             response.render('./journals/allJournals', data);
         });

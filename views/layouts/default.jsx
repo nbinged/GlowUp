@@ -49,16 +49,16 @@ class Default extends React.Component {
                                     <a className="nav-link-white" href="/home">Journal</a>
                                 </li>
 
-                                <li className="nav-item">
-                                    <a className="nav-link-white" href="/home">Routines</a>
-                                </li>
+                                {/*<li className="nav-item">*/}
+                                {/*    <a className="nav-link-white" href="/home">Routines</a>*/}
+                                {/*</li>*/}
+
+                                {/*<li className="nav-item">*/}
+                                {/*    <a className="nav-link-white" href="/home">Products</a>*/}
+                                {/*</li>*/}
 
                                 <li className="nav-item">
-                                    <a className="nav-link-white" href="/home">Products</a>
-                                </li>
-
-                                <li className="nav-item">
-                                    <a className="nav-link-white" href="/home">Stats</a>
+                                    <a className="nav-link-white" href="/statistics">Stats</a>
                                 </li>
 
                                 <li className="nav-item">
